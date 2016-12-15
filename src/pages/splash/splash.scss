@@ -1,0 +1,74 @@
+.splash{
+        margin : auto;
+        width: 90%
+    }
+
+page-splash {
+
+    .splashLogo{
+        width: 100%;
+        margin-top:30px;
+        text-align: center;
+
+        > img{
+            width: 100px;
+        }
+    }
+
+    .splashTitle{
+        color: white;
+        font-weight: 700;
+        font-size: 37px;
+        position: absolute;
+        top: 47%;
+        left: 7%;
+        height: 100px;
+        margin-top: -50px;
+    }
+
+    .splashBtn{
+        background: white;
+        width: 90%;
+        color : $color_base;
+        font-weight: $bold;
+        height: 50px;
+        position:absolute;
+        margin-top:-50px;
+        top:85%;
+
+        &:focus, &:active, &:hover{
+            background: white !important;
+        }
+    }
+
+    .loginFacebook{
+
+        position : absolute;
+        height: 46px;
+        margin-top:-46px;
+        top:95%;
+        width: 90%;
+        text-align: center;
+
+        // ICONO DE FACEBOOK
+        >ion-icon {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 25px;
+            color:white;
+        }
+
+        //TEXTO DE INICIAR CON FACEBOOK
+        &Txt{
+            display: inline-block;
+            vertical-align: middle;
+            color:white;
+            font-size: 16px;
+            margin-left:10px;
+        }
+
+    }
+
+}
+
+

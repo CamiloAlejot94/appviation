@@ -1,0 +1,501 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+//---------------------------------------------------------------------
+//---------------------------VARIALBLES-------------------------------
+//---------------------------------------------------------------------
+@font-face{
+	font-family: 'PT Sans';
+	src: url('../assets/fonts/PT_Sans-Web-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'PT Sans';
+	src: url('../assets/fonts/PT_Sans-Web-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+/*====================================================
+===================PALETA DE COLORES===================
+====================================================*/
+//Degradado
+$color_base : #29B6F6; //Azul
+$color_base2 : #28348a; // Morado
+//Degradado titulo
+$color_bar1 : #285C88; //Derecha
+$color_bar2 : #2A4D76; //Izquierda
+
+//Textos
+$color_title : #28348a; // Titulos
+$color_txt : #686868; // Textos principales
+$color_txt2 : #bdbdbd; // Textos Secundarios
+
+//Botones
+$color_btn : #74bbda; // Botones
+
+/*====================================================
+===================PESO DE FUENTES===================
+====================================================*/
+
+$bold : 700;
+$regular : 400;
+
+/*====================================================
+==================TAMAÑO DE FUENTES==================
+====================================================*/
+
+$p_size : 1.17em;
+$p_size2 : 1.4em;
+$p_lineHeight : 1.5em;
+$h1_size : 1.8em;
+
+//===================================================================================================================================================================
+
+*{
+    text-transform: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+//Cabecera con color degradado para las pantallas blancas
+.toolbar-ws > .toolbar-background{
+	background :  linear-gradient(to right, $color_bar2, $color_bar1) !important;
+}
+//Atributos generales del ion-navbar barra superior
+.toolbar-ios, .header-ios, ion-header, ion-navbar{
+    min-height: 60px !important;
+}
+
+ion-navbar{
+
+    min-height: 60px !important;
+
+    .toolbar-background{
+        border : none;
+        background-color : rgba(0,0,0,0.2);
+    }
+
+
+    ion-title{
+        position : absolute;
+        top: 18px;
+        left:0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .toolbar-title{
+		color : #FFF;
+		text-align: center;
+		font-size: 22px;
+		font-weight: 400;
+        text-transform: capitalize;        
+	}
+
+    .button-inner{
+        color : #FFF;
+    }
+
+    //Botón con el icono del usuario ubicado a la derecha de la cabecera
+    .toolbarUser{
+        position:absolute;
+        right:5px;
+        margin-top:-15px;
+
+        .user{
+            background: url(../assets/img/toolbarUser.svg)no-repeat;
+            width: 22px;
+            height: 22px;
+	    }
+    }
+}
+/*======================================================================================================
+============================================== SPINNER =================================================
+======================================================================================================*/
+//Div contenedor del spinner
+.loader{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  margin-left: -35px;
+  margin-top : -35px;
+  z-index: 10;
+}
+
+//Cargador de contenidos general
+.ws-loader {
+  width: 70px !important;
+  height: 70px !important;
+  //stroke: $color_base !important;
+  fill: transparent;
+}
+ //Cargador azul
+.blue *{
+    stroke: $color_base !important;
+}
+//Cargador blanco
+.white * {
+    stroke: #FFF !important;
+}
+
+//conetnido que se va a cargar luego del spinner
+.contentLoad{
+    transition: 500ms;
+}
+
+
+/*==============================================================================================================================================================
+===================================================CARACTERISTICAS GENERALES DE LA APLICACIÓN===================================================================
+==============================================================================================================================================================*/
+
+//Fondo general de Appviation
+.ws-bg{
+    background-image:url(../assets/img/bg.jpg) ;
+    background-size: 100%;
+}
+
+//Fondo 1 de Appviation (login y splash)
+.ws-bgBlue{
+    background-image:url(../assets/img/bgBlue.png) ;
+    background-size: 100%;
+}
+
+//Fondo 2 de Appviation (crear nuevo usuario)
+.ws-bgWhite{
+    background-image:url(../assets/img/bgWhite.png) ;
+    background-size: 100%;
+}
+
+//---------------------------------------------------------------------
+//------------------------------BOTONES--------------------------------
+//---------------------------------------------------------------------
+
+//Icono para volver atrás
+.back{
+    position : absolute;
+    top : 10px;
+    left: 15px;
+    font-size: 30px;
+}
+
+//Grupo de botones en el pie de página
+.btnGroup{
+    position : absolute;
+    top : 100%;
+    left : 0;
+    margin-top : -64px;
+    width: 100%;
+    display : flex;
+    z-index: 1;
+}
+
+.btnTest{
+    height: 60px;
+    border : none;
+    box-shadow: none;
+    background-color: $color_base;    
+    font-size: 1.3em;
+
+    &:last-child{
+        border-left:1px solid #FFF;
+    }
+
+    .quick-img{
+        width: 17px;
+        height: 17px;
+        background-image: url(../assets/img/quickTest.svg);
+    }
+
+    .final-img{
+        width: 17px;
+        height: 17px;
+        background: url(../assets/img/finalTest.svg);
+    }
+
+}
+
+// Primer estilo de boton (Fondo azul, letra blanca, bordes redondos) ------------------------------------------
+.ws-btn1{
+    min-width: 130px;
+    padding : 22px 20px;
+    font-size: 1.3em;
+    border-radius: 6px;
+    background: $color_base;
+}
+
+// Botón del tamaño total de la ventana
+.ws-full{
+    width: 100%;
+    height: 50px;
+    background-color: $color_base;
+    color: white;
+}
+
+// Botón sin border (Azul)
+.ws-outline{
+    border : 1px solid $color_base;
+    background: transparent;
+    color:$color_base;
+    font-weight: $bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+// Segundo estilo de boton (Fondo transparente, letra negra, bordes redondos) ------------------------------------------
+.btn_transparent{
+    background-color : rgba(255,255,255,0.2);
+    min-width: 130px;
+    border-radius: 6px;
+    min-height: 50px;
+    font-size: $p_size;
+}
+
+// Segundo estilo de boton (Fondo transparente, letra negra, bordes redondos) ------------------------------------------
+.btn_send{
+    position : absolute;
+    left : 50%;
+    margin-left : -50px;
+    color : $color_base;
+    font-size: $p_size + 0.2em;
+    width: 100px;
+    height: 40px;
+    background: #FFF;
+    font-weight: $bold;
+}
+
+.btn_gradient{
+    width: 100%;
+    background: linear-gradient(to right, $color_base , $color_base2);
+    border-radius : 10px;
+}
+
+//---------------------------------------------------------------------
+//------------------------------ INPUTS -------------------------------
+//---------------------------------------------------------------------
+
+/*==========================================
+ICONO JUNTO AL INPUT
+==========================================*/
+.session_lbl{
+    position:absolute;
+    margin-top: 11px;
+    margin-left: 5px;
+}
+
+.session_input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    width: 100%;
+    font-size: 1.3em;
+    color: #333;
+    transition: all 0.5s ease;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-radius: 0;
+
+    &:focus {
+        border-bottom: 1px solid $color_base2;
+    }    
+}
+/*==============================================================================================================================================================
+=========================================================TEXTOS DENTRO DE LOS EJERCICIOS=========================================================================
+==============================================================================================================================================================*/
+
+// Titulo del ejercicio
+.wsTitle-ex{
+    color: $color_base;
+    text-align: center;
+    font-weight: $bold;
+    margin: 20px auto;
+    max-width: 95%;
+    text-transform: capitalize;
+}
+
+.wsDescription-ex{
+    color: $color_txt;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+}
+
+/*==============================================================================================================================================================
+===================================================================SLIDES===================================================================================
+==============================================================================================================================================================*/
+.practice-exercise {
+
+    &-title{
+        text-align : center;
+        color : $color_base;
+        font-weight: $bold;
+    }
+
+    &-description{
+        color : $color_txt;
+        margin : auto;
+        width: 92%;
+        padding-bottom : 20px;
+        border-bottom : 1px solid $color_base;
+        word-wrap: break-word;
+        line-height: $p_lineHeight;
+
+    }
+
+    //Botón degradado de la práctica
+    &-figure{
+        position : absolute;
+        top : 0;
+        width: 170px;
+        margin-left : -85px;
+        height: 170px;
+        background: linear-gradient(to bottom right, $color_base, $color_base2 170%);
+        border-radius : 10px;
+        transition : 200ms;
+        margin-top : 20px;
+        font-size: 1.8em;
+
+        >p{
+            font-size: 1.5em;
+        }
+    }
+}
+
+.figure-range{
+	position: absolute;
+	font-size: 0.1em;
+	margin-top: 35px;
+	font-size: 1em;
+	color: #FFF;
+	-webkit-transition: 1s;
+	transition: 1s;
+	left:63px;
+	font-size: 16px;
+}
+
+/*========================================================================================================================
+========================================SLIDE GRANDE =====================================================================
+========================================================================================================================*/
+//Botón superior que muestra el alphabet y numbers
+.btnSlideOut{
+    position:absolute;
+    top : 0;
+    width: 275px;
+    left : 48%;
+    margin-top: 30px;
+    margin-left : -130px;
+    border-color : $color_base;
+    color : $color_base;
+    font-size: 18px;
+    height: 40px;
+}
+
+//Slides de las practicas
+.slideLarge{
+
+    position: absolute;
+    height: 85%;
+    top: 45%;
+    left:0;
+    margin-top: -50%;
+
+    //Practica 1, 2, etc
+    &-slide{
+        //Botón para seleccionar la práctica
+        &-button{
+            position:absolute;
+            top : 10%;
+            left:50%;
+            width: 240px !important;
+            min-height: 350px;
+            margin-left:-120px;
+            background: linear-gradient(to bottom right, $color_base, $color_base2 170%);
+            border-radius: 10px;
+            font-size: $h1_size;
+        }
+    }
+
+}
+
+/*==============================================================================================================================================================
+===================================================================MEDIA QUERY===================================================================================
+==============================================================================================================================================================*/
+
+//Tamaño tipo iphone 5 o SE
+@media screen and (max-width: 330px ) {
+
+    //Ajuste del texto para que no quede cortado en los dispositivos de poca resolucion
+    ion-navbar{
+        .toolbar-title{
+            font-size: 19px !important;
+        }
+    }
+}
+
+//Tamaño tipo iphone 5 o SE VERTICAL
+@media screen and (min-width: 331px) and (max-width: 555px)  {
+
+//Ajusta lista de lets para que no se vea tan abajo en estos equipos
+.lets_items{
+    margin-top : 30px !important;
+}
+}
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN BAJA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+
+@media screen and (min-height: 0)  {
+
+    .txt-ws{
+        font-size: $p_size;
+    }
+
+    .h1-ws{
+        font-size: $h1_size;
+    }
+
+} //Termina MediaQuery para pantalla baja
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN MEDIA ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+    
+@media screen and (min-height: 600px)  {
+
+    .txt-ws{
+        font-size: $p_size + 0.09em;
+    }
+
+    .h1-ws{
+        font-size: $h1_size + 0.4em;
+    }
+
+} //Termina MediaQuery para pantalla media
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+
+@media screen and (min-height: 685px)  {
+
+    .txt-ws{
+        font-size: $p_size + 0.15em;
+    }
+
+} //Termina MediaQuery para pantalla alta

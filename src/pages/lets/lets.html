@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-left menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Let's practice</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ws-bg">
+
+  <ul class="lets_items">
+
+    <li ion-button clear (click)="goToICAO(0)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_word" >Pronunciation</p>
+    </li><br>
+
+    <li ion-button clear (click)="goToICAO(1)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_word" >Comprehension</p>
+    </li><br>
+
+    <li ion-button clear (click)="goToICAO(2)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_word" >Fluency</p>
+    </li><br>
+
+    <li ion-button clear (click)="goToICAO(3)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_word" >Interation</p>
+    </li><br>
+
+    <li ion-button clear (click)="goToICAO(4)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_word" >Vocabulary</p>
+    </li><br>
+
+    <li ion-button clear (click)="goToICAO(5)">
+      <img src="assets/img/lets-item.svg" class="lets_itemImg" >
+      <p class="item_wordLast" >Structure</p>
+    </li><br>
+
+  </ul>
+
+</ion-content>
+
+<ion-footer>
+  <div class="btnGroup">
+    <button ion-button class="btnTest" full><span class="quick-img"></span>&nbsp;Quick test</button>
+    <button ion-button class="btnTest" full><span class="final-img"></span>&nbsp;Final test</button>
+  </div>
+</ion-footer>

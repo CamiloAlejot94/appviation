@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar class="toolbar-ws">
+    <ion-title>Exercise {{numExercise}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--
+    Spinner para cargar el contenido
+  -->
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader blue"></ion-spinner>
+  </div>
+
+  <div class="contentLoad" *ngIf="contentLoad">
+
+  <!--Botón flotante superior para volver a mostrar el icao Alphabet-->
+  <button class="btnIcaoView" ion-button outline (click)="backToPronunciationListen()">ICAO Alphabet and Number</button>
+
+  <ion-slides class="pronunciationExerciseSlides" [options]="pronunciationSlideOptions">
+      <ion-slide class="pronunciationExerciseSlides-slide" *ngFor="let practice of practices">
+      <button ion-button class="pronunciationExerciseSlides-slide-button" (click)="goToPractice(numExercise, practice.name)">Practice {{practice.name}}</button>
+    </ion-slide>
+      
+  </ion-slides>
+  
+  </div>
+
+</ion-content>

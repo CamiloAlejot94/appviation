@@ -1,0 +1,61 @@
+page-fluency-exercise {
+    .title {
+        color: $color_base;
+        text-align: center;
+        font-weight: $bold;
+        margin-bottom: 20px;
+    }
+    
+    .description {
+        color: $color_txt;
+        font-size: 16px;
+        width: 90%;
+        margin: auto;
+    }
+    .itemsTitle{
+        color: #666;
+        font-size: 16px;
+        margin: 10px 0;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .list{
+
+        &Item{
+            color: #686868;
+            margin-bottom: 20px;
+            font-size: 16px;
+            width: 90%;
+            &:last-child{margin-bottom: 0}
+
+        }
+    }
+
+    .figure-range{
+        position: absolute;
+        font-size: 0.1em;
+        margin-top: 35px;
+        font-size: 1em;
+        color: #FFF;
+        -webkit-transition: 1s;
+        transition: 1s;
+        left:63px;
+        font-size: 16px;
+    }
+
+    //Clase propia del objeto ion slide
+    #sliderComprehension > .swiper-slide-prev, #sliderComprehension > .swiper-slide-next {
+        .practice-exercise-figure{
+            width: 150px;
+            height: 150px;
+            font-size: 26px;
+        }
+
+        .figure-range{
+            opacity: 0;
+        }
+    }
+
+}

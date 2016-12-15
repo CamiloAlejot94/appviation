@@ -1,0 +1,44 @@
+page-icao-standars {
+
+.wsTitle-ex{
+    margin-top: 5px !important;
+}
+
+.wsDescription-ex{
+    width: 95%;
+    margin: 20px 0;
+}
+
+//Regilla de niveles (levels)
+.ICAO_levels{
+  display: flex;
+  flex-wrap: wrap;
+  margin : auto;
+}
+
+//Cada item de los niveles (levels)
+.ICAO_level{
+  border : 1px solid $color_txt2;
+  border-radius: 5px;
+  margin : 0 auto;
+  margin-top : 5px;
+  padding : 3px 15px;
+  font-weight: $bold;
+  color : $color_txt2;
+  font-size: 20px;
+  transition : 400ms;
+}
+
+.select-level-ICAO{
+  background-color : $color_base;
+  color : #FFF;
+}
+
+.ICAO_done{
+    position : absolute;
+    left : 50%;
+    margin-left : -65px;
+    margin-bottom : 30px;
+}
+
+}

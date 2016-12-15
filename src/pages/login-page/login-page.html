@@ -1,0 +1,55 @@
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>loginPage</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+
+
+<ion-content padding class="ws-bgWhite">
+
+
+  <!--
+    LOGO EN LA PANTALLA DE LOGIN
+  -->
+  <div class="loginLogo">
+    <img src="assets/img/logo.svg" alt="">
+  </div>
+
+  <!--
+    TITULO LOGIN
+  -->
+  <h1 class="loginTitle">
+    Login
+  </h1>
+
+
+  <div class="loginForm">
+
+    <!--
+      INICIO DE SESIÓN CON USUARIO Y CONTRASEÑA
+    -->
+    <div>
+      <label for="username" class="session_lbl"><img src="assets/img/loginUser.svg" height="22" alt=""></label>
+      <input #username class="session_input loginInput" type="email" placeholder="Username / email">
+    </div>
+
+    <div>
+      <label for="password" class="session_lbl"><img src="assets/img/loginPass.svg" height="22" alt=""></label>    
+      <input #password class="session_input loginInput" type="password" placeholder="Password">
+    </div>
+
+    <button class="btn_gradient loginBtn" (click)="login(username.value, password.value)" ion-button large>Login</button>
+
+  </div>
+
+
+    <!--
+      NUEVO USUARIO
+    -->
+    <div class="loginNewUser">
+      <h2 class="loginNewUserTitle" (click)="goToSignUp()">Sing Up for an account</h2>
+    </div>
+
+</ion-content>

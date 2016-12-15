@@ -1,0 +1,1265 @@
+{
+  "icaoStandars" : {
+    "0" : {
+      "title" : "pronunciation",
+      "description" : "This criterion refers to the ability to produce intelligible utterances and comprehensible speech to fulfil the test and task requirements and includes stress and intonation as well as the production of individual sounds. Key indicators of proficiency in pronunciation are the extent of L1 influence, the degree of strain caused to the listener; the amount of the speech which is unintelligible, and the extent to which the pronunciation of the candidate interferes with understanding.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Pronunciation, stress, rhythm, and intonation are heavily influenced by the first language or regional variation and usually interfere with ease of understanding."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Pronunciation, stress, rhythm, and intonation are influenced by the first language or regional variation and frequently interfere with ease of understanding."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Pronunciation, stress, rhythm, and intonation are influenced by the first language or regional variation butonly sometimesinterfere with ease of understanding."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Pronunciation, stress, rhythm, and intonation, thoughin fluenced by the first language or regional variation, rarely interfere with ease of understanding."
+          },
+          "5" : {
+            "id" : "6",
+						"cl" : "",
+            "description" : "Pronunciation, stress, rhythm, and intonation, though possibly influenced by the first language or regional variation, almost never interfere with ease of understanding."
+          }
+      }
+    },
+    "1" : {
+      "title" : "comprehension",
+      "description" : "This criterion refers to the candidate’s ability to accurately process the spoken language presented in face-to-face and voice only communications with or without the use of clarification strategies. The key indicators of comprehension are the response time of the listener, the accuracy and appropriateness of the listener’s response and the need for the speaker to repeat, moderate or adapt the spoken language input as a response to the requirement of the listener for clarification. Performance is viewed in terms of the extent to which the candidate’s comprehension of any given spoken language input impacts upon effective communication.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Comprehension is limited to isolated, memorized phrases when they are carefully and slowly articulated."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Comprehension is often accurate on common, concrete, and work-related topics when the accent or variety used is sufficiently intelligible for an international community of users.  May fail to understand a linguistic or situational complication or an unexpected turn of events."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Comprehension is mostly accurate on common, concrete, and work-related topics when the accent or variety used is sufficiently intelligible for an international community of users.  When the speaker is confronted with a linguistic or situational complication or an unexpected turn of events, comprehension may be slower or require clarification strategies."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Comprehension is accurate on common, concrete, and work-related topics and mostly accurate when the speaker is confronted with a linguistic or situational complication or an unexpected turn of events.  Is able to comprehend a range of speech varieties (dialect and/or accent) or registers."
+          },
+          "5" : {
+            "id" : "6",
+            "cl" : "",
+            "description" : "Comprehension is consistently accurate in nearly all contexts and includes comprehension of linguistic and cultural subtleties."
+          }
+      }
+    },
+    "2" : {
+      "title" : "fluency",
+      "description" : "This criterion is concerned with the clarity of the message and refers to the ability to talk with appropriate levels of continuity, rate and effort and to link ideas and language together to form coherent, cohesive connected speech. The criterion assesses the candidate’s ability to link utterances together to form coherent monologue and contributions to dialogue, to produce utterances relevant to preceding utterances in the discourse, and to arrange utterances logically to develop the themes or output required by the tasks. Key indicators of fluency are an appropriate speech rate (c. 100 words per minute and above) and speech continuity without general or undue hesitation or hesitation specifically on transition from rehearsed or formulaic speech to spontaneous interaction. The key indicators of coherence and cohesion are logical sequencing of sentences, clear marking of stages in a response, request, instruction, report or description, and the use of cohesive devices within and between sentences. Performance is viewed in terms of the extent to which the candidate’s speech rate and continuity, coherence and cohesion impacts upon effective communication.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Can produce very short, isolated, memorized utterances with frequent pausing and a distracting use of fillers to search for expressions and to articulate less familiar words."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Produces stretches of language, but phrasing and pausing are often inappropriate.  Hesitations or slowness in language processing may prevent effective communication.  Fillers are sometimes distracting."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Produces stretches of language at an appropriate tempo.  There may be occasional loss of fluency on transition from rehearsed or formulaic speech to spontaneous interaction, but this does not prevent effective communication.  Can make limited use of discourse markers or connectors.  Fillers are not distracting."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Able to speak at length with relative ease on familiar topics but may not vary speech flow as a stylistic device.  Can make use of appropriate discourse markers or connectors."
+          },
+          "5" : {
+            "id" : "6",
+            "cl" : "",
+            "description" : "Able to speak at length with a natural, effortless flow.  Varies speech flow for stylistic effect, e.g. to emphasize a point.  Usesappropriate discourse markers and connectors spontaneously."
+          }
+      }
+    },
+    "3" : {
+      "title" : "interaction",
+      "description" : "This criterion refers to the candidate’s ability to take an active part in the development of the discourse and to provide input that is immediate, appropriate and informative, showing due sensitivity to turn-taking. It also refers to the deployment of strategies to maintain and repair interaction at an appropriate level throughout the test so that the tasks can be fulfilled. The criterion therefore requires an ability to participate in the range of interactive situations in the test and to develop discourse in the range of tasks by initiating and responding appropriately, dealing adequately with apparent misunderstandings by checking, confirming or clarifying as required. Performance is viewed in terms of the candidate’s overall effectiveness in dealing with the tasks set and how appropriately, accurately and relevantly the candidate’s contributions fulfil the requirements of the task. The extent of the contributions should be appropriate, i.e. long or short as required at a particular point in the dynamic development of the discourse. The contributions should be relevant to the tasks and should be arranged logically to develop the themes or stages required by the tasks.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Response time is slow and often inappropriate.  Interaction is limited to simple routine exchanges."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Responses are sometimes immediate, appropriate, and informative.  Can initiate and maintain exchanges with reasonable ease on familiar topics and in predictable situations.  Generally inadequatewhen dealing with an unexpected turn of events."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Responses are usually immediate, appropriate, and informative.  Initiates and maintains exchanges even when dealing with an unexpected turn of events.  Deals adequately with apparent misunderstandings by checking, confirming, or clarifying."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Responses are immediate, appropriate, and informative.  Manages the speaker/listener relationship effectively."
+          },
+          "5" : {
+            "id" : "6",
+            "cl" : "",
+            "description" : "Interacts with ease in nearly all situations.  Is sensitive to verbal and non-verbal cues and responds to them appropriately."
+          }
+      }
+    },
+    "4" : {
+      "title" : "vocabulary",
+      "description" : "This criterion refers to the range of vocabulary the candidate uses and the accuracy and appropriateness of that use in terms of the specified task, including the precision with which meanings and attitudes can be expressed. Key indicators of lexical proficiency are the variety of words used, the adequacy and appropriateness of the words used and the ability to circumlocute/paraphrase (get round a vocabulary gap by using other words) with or without noticeable hesitation. Performance is viewed in terms of the sufficiency of the candidate’s lexical resource in communicating effectively on common, concrete and work-related topics and a range of less familiar, non-routine topics, the ability to paraphrase consistently and effectively, the extent to which vocabulary is idiomatic, nuanced and sensitive to register and the extent to which the candidate’s lexical resource impacts upon effective communication.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Limited vocabulary range consisting only of isolated words and memorized phrases."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Vocabulary range and accuracy are often sufficient to communicate on common, concrete, or work-related topics, but range is limited and the word choice often inappropriate.  Is often unable to paraphrase successfully when lacking vocabulary."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Vocabulary range and accuracy are usually sufficient to communicate effectively on common, concrete, and work-related topics.  Can often paraphrase successfully when lacking vocabulary in unusual or unexpected circumstances."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Vocabulary range and accuracy are sufficient to communicate effectively on common, concrete, and work-related topics.  Paraphrases consistently and successfully.  Vocabulary is sometimes idiomatic."
+          },
+          "5" : {
+            "id" : "6",
+            "cl" : "",
+            "description" : "Vocabulary range and accuracy are sufficient to communicate effectivelyon a wide variety of familiar and unfamiliar topics.  Vocabulary is idiomatic, nuanced, and sensitive to register."
+          }
+      }
+    },
+    "5" : {
+      "title" : "structure",
+      "description" : "This criterion refers to the range and accurate use of the candidate’s grammatical resource as manifested in the candidate’s speech at the level of phrase and discourse and as determined relevant by language functions appropriate to the task. Key indicators of grammatical accuracy are the control of the grammatical resource, both basic and complex, the number of grammatical errors in a given amount of speech and the effect of error on communication. Performance is viewed in terms of the overall effectiveness of the language used in spoken interaction and the extent to which the range of structures used and the errors in the use of those structures may impact upon effective communication.",
+      "levels" : {
+          "0" : {
+            "id" : "1",
+            "cl" : "select-level-ICAO",
+            "description" : "Performs at a level below the Elementary level."
+          },
+          "1" : {
+            "id" : "2",
+            "cl" : "",
+            "description" : "Shows only limited control of a few simple memorized grammatical structures and sentence patterns."
+          },
+          "2" : {
+            "id" : "3",
+            "cl" : "",
+            "description" : "Basic grammatical structures and sentence patterns associated with predictable situations are not always well controlled.  Errors frequently interfere with meaning."
+          },
+          "3" : {
+            "id" : "4",
+            "cl" : "",
+            "description" : "Basic grammatical structures and sentence patterns are used creatively and are usually well controlled.  Errors may occur, particularly in unusual or unexpected circumstances, but rarely interfere with meaning."
+          },
+          "4" : {
+            "id" : "5",
+            "cl" : "",
+            "description" : "Basic grammatical structures and sentence patterns are consistently well controlled.  Complex structures are attempted but with errors which sometimes interfere with meaning."
+          },
+          "5" : {
+            "id" : "6",
+            "cl" : "",
+            "description" : "Both basic and complex grammatical structures and sentence patterns are consistently well controlled."
+          }
+      }
+    }
+  },
+
+  "comprehensionExercise" : {
+    "description" : {
+      "0" : "In this exercise you will hear some parts of a series of radio communications. In the first part of the exercise you will be asked to explain what you understand, in the second part, you will have to ask a question to the person in the communication, finally, in the third part you will be asked to give some advice to the person in the communication.",
+      "1" : "In this exercise you will hear a communication, take notes and prepare a report about it.",
+      "2" : "In this exercise you will hear a communication, take notes and answer the questions with one of the following options:"
+    },
+    "0" : {
+      "0" : {
+        "val" : "1-1",
+        "name" : "Practice 1",
+        "exercises" : "5"
+      },
+      "1" : {
+        "val" : "1-2",
+        "name" : "Practice 2",
+        "exercises" : "3"
+      },
+      "2" : {
+        "val" : "1-3",
+        "name" : "Practice 3",
+        "exercises" : "3"
+      }
+    },
+    "1" : {
+      "0" : {
+        "val" : "2-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "2" : {
+      "0" : {
+        "val" : "3-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "3" : {
+      "0" : {
+        "val" : "4-1",
+        "name" : "Practice 1",
+        "exercises" : "5"
+      },
+      "1" : {
+        "val" : "4-2",
+        "name" : "Practice 2",
+        "exercises" : "3"
+      },
+      "2" : {
+        "val" : "4-3",
+        "name" : "Practice 3",
+        "exercises" : "3"
+      }
+    },
+    "4" : {
+      "0" : {
+        "val" : "5-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "5" : {
+      "0" : {
+        "val" : "6-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "6" : {
+      "0" : {
+        "val" : "7-1",
+        "name" : "Practice 1",
+        "exercises" : "5"
+      },
+      "1" : {
+        "val" : "7-2",
+        "name" : "Practice 2",
+        "exercises" : "3"
+      },
+      "2" : {
+        "val" : "7-3",
+        "name" : "Practice 3",
+        "exercises" : "3"
+      }
+    },
+    "7" : {
+      "0" : {
+        "val" : "8-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "8" : {
+      "0" : {
+        "val" : "9-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    },
+    "9" : {
+      "0" : {
+        "val" : "10-1",
+        "name" : "Practice 1",
+        "exercises" : "1"
+      }
+    }
+  },
+
+  "comprehensionPractice" : {
+    "statements" : {
+      "3" : {
+        "0" : {
+          "id" : "1",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "1",
+          "link" : "3-1-1.mp3"
+        },
+        "1" : {
+          "id" : "2",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "2",
+          "link" : "3-1-2.mp3"
+        },
+        "2" : {
+          "id" : "3",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "3",
+          "link" : "3-1-3.mp3"
+        },
+        "3" : {
+          "id" : "4",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "4",
+          "link" : "3-1-4.mp3"
+        },
+        "4" : {
+          "id" : "5",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "5",
+          "link" : "3-1-5.mp3"
+        }
+      },
+      "6" : {
+        "0" : {
+          "id" : "1",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "1",
+          "link" : "6-1-1.mp3"
+        },
+        "1" : {
+          "id" : "2",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "2",
+          "link" : "6-1-2.mp3"
+        },
+        "2" : {
+          "id" : "3",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "3",
+          "link" : "6-1-3.mp3"
+        },
+        "3" : {
+          "id" : "4",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "4",
+          "link" : "6-1-4.mp3"
+        },
+        "4" : {
+          "id" : "5",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "5",
+          "link" : "6-1-5.mp3"
+        }
+      },
+      "9" : {
+        "0" : {
+          "id" : "1",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "1",
+          "link" : "9-1-1.mp3"
+        },
+        "1" : {
+          "id" : "2",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "2",
+          "link" : "9-1-2.mp3"
+        },
+        "2" : {
+          "id" : "3",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "3",
+          "link" : "9-1-3.mp3"
+        },
+        "3" : {
+          "id" : "4",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "4",
+          "link" : "9-1-4.mp3"
+        },
+        "4" : {
+          "id" : "5",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "5",
+          "link" : "9-1-5.mp3"
+        }
+      },
+      "10" : {
+        "0" : {
+          "id" : "1",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "1",
+          "link" : "10-1-1.mp3"
+        },
+        "1" : {
+          "id" : "2",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "2",
+          "link" : "10-1-2.mp3"
+        },
+        "2" : {
+          "id" : "3",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "3",
+          "link" : "10-1-3.mp3"
+        },
+        "3" : {
+          "id" : "4",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "4",
+          "link" : "10-1-4.mp3"
+        },
+        "4" : {
+          "id" : "5",
+          "cl" : "float-answer",
+          "select" : "",
+          "val" : "5",
+          "link" : "10-1-5.mp3"
+        }
+      }
+    },
+    "audioList" : {
+      "0" : {
+        "0" : {
+          "name" : "1",
+          "script" : "N601AD good afternoon. Expect the ILS 6 approach, altimeter 30.03.",
+          "link" : "1-1-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "Cleared to land, 22L. Your localizer is not on.",
+          "link" : "1-1-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "OK, we’re declaring emergency. We’re going to land 31R. We’re going to the left and then we’re coming around.",
+          "link" : "1-1-3.mp3"
+        },
+        "3" : {
+          "name" : "4",
+          "script" : "American 2 Heavy, we are turning around to the left here and landing on 31. Remove everybody from our way, we’ve declared an emergency. We’re on a visual.",
+          "link" : "1-1-4.mp3"
+        },
+        "4" : {
+          "name" : "5",
+          "script" : "Alright, American 2243, I need you to move, I’ve got traffic inbound, so make the left turn. Left turn, no delay, on runway 22R, left on FB.",
+          "link" : "1-1-5.mp3"
+        }
+      },
+      "1" : {
+        "0" : {
+          "name" : "1",
+          "script" : "Delta 534, we declare an emergency, we’ve got to go back; we lost an engine.",
+          "link" : "1-2-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "Delta 534 we got 25 200 lbs. of fuel as seen on the gages right now.",
+          "link" : "1-2-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "Cactus 905 clear to land runway 19L, the Delta has got an engine down, he may turn right, keep him in sight, maintain visual separation.",
+          "link" : "1-2-3.mp3"
+        }
+      },
+      "2" : {
+        "0" : {
+          "name" : "1",
+          "script" : "Yeah, I’ll tell you what. We got some smoke and fumes back in the cabin, and we are going to go ahead and declare an emergency.",
+          "link" : "1-3-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "Tower United 479, just got a call from the cabin and they are describing it as a medium smoke in the first class galley.",
+          "link" : "1-3-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "Boston Tower, JAL7 Heavy, request hold short 10 minutes due to system trouble.",
+          "link" : "1-3-3.mp3"
+        }
+      },
+      "3" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "2.mp3"
+        }
+      },
+      "4" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "3.mp3"
+        }
+      },
+      "5" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-1-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-1-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-1-3.mp3"
+        },
+        "3" : {
+          "name" : "4",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-1-4.mp3"
+        },
+        "4" : {
+          "name" : "5",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-1-5.mp3"
+        }
+      },
+      "6" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-2-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-2-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-2-3.mp3"
+        }
+      },
+      "7" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-3-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-3-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "4-3-3.mp3"
+        }
+      },
+      "8" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "5.mp3"
+        }
+      },
+      "9" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "6.mp3"
+        }
+      },
+      "10" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-1-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-1-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-1-3.mp3"
+        },
+        "3" : {
+          "name" : "4",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-1-4.mp3"
+        },
+        "4" : {
+          "name" : "5",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-1-5.mp3"
+        }
+      },
+      "11" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-2-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-2-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-2-3.mp3"
+        }
+      },
+      "12" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-3-1.mp3"
+        },
+        "1" : {
+          "name" : "2",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-3-2.mp3"
+        },
+        "2" : {
+          "name" : "3",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "7-3-3.mp3"
+        }
+      },
+      "13" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "8.mp3"
+        }
+      },
+      "14" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "9.mp3"
+        }
+      },
+      "15" : {
+        "0" : {
+          "name" : "1",
+          "script" : "JFK GND: BA182 Heavy, right MA, right B, then P.",
+          "link" : "10.mp3"
+        }
+      }
+    }
+  },
+
+  "pronunciationExerciseListen" : {
+    "descriptionExercises":{
+      "0" : {
+        "title" : "ICAO",
+        "description" : "Code words are assigned by the International Civil Aviation Organization (ICAO) to the English alphabet letters so that pronunciation and understanding of critical combinations of letters and numbers is not an issue for those transmitting and receiving voice messages by radio or telephone regardless of their native language. Listen to the pronunciation of the ICAO alphabet:"
+      },
+      "1" : {
+        "title" : "ICAO",
+        "description" : "Likewise, ICAO numbers have a special pronunciation aiming to prevent communication and comprehension problems. Listen to the pronunciation of ICAO numbers."
+      }
+    },
+    "icaoAlphabet1" : {
+      "0" : {
+        "word" : "Alfa",
+        "spell" : "Alfa"
+      },
+      "1" : {
+        "word" : "Bravo",
+        "spell" : "Bravo"
+      },
+      "2" : {
+        "word" : "Charlie",
+        "spell" : "Charlie"
+      },
+      "3" : {
+        "word" : "Delta",
+        "spell" : "Delta"
+      },
+      "4" : {
+        "word" : "Echo",
+        "spell" : "Echo"
+      },
+      "5" : {
+        "word" : "Foxtrot",
+        "spell" : "Foxtrot"
+      },
+      "6" : {
+        "word" : "Golf",
+        "spell" : "Golf"
+      },
+      "7" : {
+        "word" : "Hotel",
+        "spell" : "Hotel"
+      },
+      "8" : {
+        "word" : "India",
+        "spell" : "India"
+      },
+      "9" : {
+        "word" : "Juliet",
+        "spell" : "Juliet"
+      },
+      "10" : {
+        "word" : "Kilo",
+        "spell" : "Kilo"
+      },
+      "11" : {
+        "word" : "Lima",
+        "spell" : "Lima"
+      },
+      "12" : {
+        "word" : "Mike",
+        "spell" : "Mike"
+      },
+      "13" : {
+        "word" : "November",
+        "spell" : "November"
+      },
+      "14" : {
+        "word" : "Oscar",
+        "spell" : "Oscar"
+      },
+      "15" : {
+        "word" : "Papa",
+        "spell" : "Papa"
+      },
+      "16" : {
+        "word" : "Quebec",
+        "spell" : "Quebec"
+      },
+      "17" : {
+        "word" : "Romeo",
+        "spell" : "Romeo"
+      },
+      "18" : {
+        "word" : "Sierra",
+        "spell" : "Sierra"
+      },
+      "19" : {
+        "word" : "Tango",
+        "spell" : "Tango"
+      },
+      "20" : {
+        "word" : "Uniform",
+        "spell" : "Uniform"
+      },
+      "21" : {
+        "word" : "Victor",
+        "spell" : "Victor"
+      },
+      "22" : {
+        "word" : "Whiskey",
+        "spell" : "Whiskey"
+      },
+      "23" : {
+        "word" : "X-ray",
+        "spell" : "X-ray"
+      },
+      "24" : {
+        "word" : "Yankee",
+        "spell" : "Yankee"
+      },
+      "25" : {
+        "word" : "Zulu",
+        "spell" : "Zulu"
+      }
+    },
+    "icaoNumbers1" : {
+      "0" : {
+        "word" : "ZE-RO",
+        "spell" : "zero",
+        "num" : "0"
+      },
+      "1" : {
+        "word" : "WUN",
+        "spell" : "wun",
+        "num" : "1"
+      },
+      "2" : {
+        "word" : "TOO",
+        "spell" : "too",
+        "num" : "2"
+      },
+      "3" : {
+        "word" : "TREE",
+        "spell" : "tree",
+        "num" : "3"
+      },
+      "4" : {
+        "word" : "FOWer",
+        "spell" : "fower",
+        "num" : "4"
+      },
+      "5" : {
+        "word" : "FIFE",
+        "spell" : "fife",
+        "num" : "5"
+      },
+      "6" : {
+        "word" : "SIX",
+        "spell" : "six",
+        "num" : "6"
+      },
+      "7" : {
+        "word" : "SEVen",
+        "spell" : "seven",
+        "num" : "7"
+      },
+      "8" : {
+        "word" : "AIT",
+        "spell" : "ait",
+        "num" : "8"
+      },
+      "9" : {
+        "word" : "NINer",
+        "spell" : "niner",
+        "num" : "9"
+      },
+      "10" : {
+        "word" : "DAY SEE MAL",
+        "spell" : "day see mal",
+        "num" : "10"
+      },
+      "11" : {
+        "word" : "HUNdred",
+        "spell" : "hundred",
+        "num" : "11"
+      },
+      "12" : {
+        "word" : "TOUSAND",
+        "spell" : "thousand",
+        "num" : "12"
+      }
+    }
+  },
+
+  "pronunciationPractice" : {
+    "0" : {
+      "0" : {
+        "name" : 1,
+        "description" : "Listen carefully as the following words are spelled. Write the words in the same order you hear them.",
+        "audios" : {
+          "0" : {
+            "val" : "1",
+            "src" : ""
+          },
+          "1" : {
+            "val" : "2",
+            "src" : ""
+          },
+          "2" : {
+            "val" : "3",
+            "src" : ""
+          },
+          "3" : {
+            "val" : "4",
+            "src" : ""
+          },
+          "4" : {
+            "val" : "5",
+            "src" : ""
+          }
+        }
+      },
+      "1" : {
+        "name" : 2,
+        "description" : "Listen to the following information about call signs, flight levels, headings, wind direction and speed, transponder codes, runways, and frequencies; drag the missing number into the right position.",
+        "audios" : {
+          "0" : {
+            "word" : "THOMSOM",
+            "src" : "",
+            "answer" : "455"
+          },
+          "1" : {
+            "word" : "Flight level",
+            "src" : "",
+            "answer" : "180"
+          },
+          "2" : {
+            "word" : "Heading",
+            "src" : "",
+            "answer" : "100"
+          },
+          "3" : {
+            "word" : "Flight level",
+            "src" : "",
+            "answer" : "210"
+          },
+          "4" : {
+            "word" : "Runway",
+            "src" : "",
+            "answer" : "26"
+          },
+          "5" : {
+            "word" : "Squawk",
+            "src" : "",
+            "answer" : "4662"
+          },
+          "6" : {
+            "word" : "Frequency",
+            "src" : "",
+            "answer" : "121.100 MHz"
+          },
+          "7" : {
+            "word" : "EASY",
+            "src" : "",
+            "answer" : "203"
+          },
+          "8" : {
+            "word" : "Heading",
+            "src" : "",
+            "answer" : "280"
+          },
+          "9" : {
+            "word" : "Flight level",
+            "src" : "",
+            "answer" : "100"
+          },
+          "10" : {
+            "word" : "Squawk",
+            "src" : "",
+            "answer" : "7031"
+          },
+          "11" : {
+            "word" : "Frequency",
+            "src" : "",
+            "answer" : "120.925 MHz"
+          },
+          "12" : {
+            "word" : "Flight level",
+            "src" : "",
+            "answer" : "200"
+          },
+          "13" : {
+            "word" : "",
+            "src" : "",
+            "answer" : ""
+          },
+          "14" : {
+            "word" : "Heading",
+            "src" : "",
+            "answer" : "345"
+          },
+          "15" : {
+            "word" : "Runway",
+            "src" : "",
+            "answer" : "07"
+          },
+          "16" : {
+            "word" : "Frequency",
+            "src" : "",
+            "answer" : "132.750 MHz"
+          },
+          "17" : {
+            "word" : "Frequency",
+            "src" : "",
+            "answer" : "119.050 MHz"
+          },
+          "18" : {
+            "word" : "Wind",
+            "src" : "",
+            "answer" : "340"
+          }
+        }
+      },
+      "2" : {
+        "name" : 3,
+        "description" : "Read the following words and record your voice spelling them by using the ICAO Alphabet."
+      },
+      "3" : {
+        "name" : 4,
+        "description" : "Record your voice / Save and send"
+      }
+    },
+    "1" : {
+      "0" : {
+        "name" : 1,
+        "description" : ""
+      },
+      "1" : {
+        "name" : 2,
+        "description" : ""
+      },
+      "2" : {
+        "name" : 3,
+        "description" : ""
+      },
+      "3" : {
+        "name" : 4,
+        "description" : ""
+      }
+    }
+    
+  },
+
+
+  "fluencyExercise" : {
+    "0" : {
+      "title" : "What is fluency?",
+      "description" : "Fluency is the ability to speak easily, reasonably quickly, and without a lot of unnecessary stops and pauses."
+    },
+    "1" : {
+      "title" : "Dramatic Performance",
+      "description" : "This fluency exercise is about role playing one of parts in a conversation. By understanding the context of the situation you determine how that person is feeling at the moment of speaking and you project those emotion during your role-play."
+    },
+    "2" : {
+      "title" : "Word by Word",
+      "description" : "Word by word is an exercise that will help you focus on the progressive construction of your speech and gain speed by adding an extra word to the same sentence in every repetition. You will also be practicing your pronunciation of isolated and linked words."
+    },
+    "3" : {
+      "title" : "Reading a text from top to bottom",
+      "description" : "By reading a text accurately, quickly, and with expression you can develop fluency in the target language (English, in this case). Fluency provides a bridge between word recognition and comprehension. If you are fluent in English you recognize words automatically, meaning that you do not sacrifice comprehension to word decoding. Through this exercise you can develop your ability to express in a natural way, effortlessly and with expression."
+    },
+    "4" : {
+      "title" : "Chunks",
+      "description" : "Knowing what a word means is useful and important, but knowing how to use it in context is vital. Words are not to be used in isolation (most of the times) but as part of an expression or a fixed set of words. Being able to call on these 'chunks' of vocabulary will help you improve English fluency skills. "
+    },
+    "5" : {
+      "title" : "Shadowing",
+      "description" : "In this exercise we will practice with a technique called shadowing which is a good way to work on your pronunciation, rhythm and intonation. In shadowing you practice repeating after the speaker as soon as possible. Don’t wait and listen to the whole sentence and then repeat. You want to repeat as soon as possible almost at the same time as the speaker. "
+    },
+    "6" : {
+      "title" : "Fillers",
+      "description" : "When speaking continuously it is common to hesitate in the middle and search for words to add to our speech. This is when fillers are used in our conversations. Fillers buy you time as you think of the next word to say. There exist several words or expressions acting as fillers, some of them have meaning, some others don’t."
+    },
+    "7" : {
+      "title" : "Discourse markers",
+      "description" : "Discourse markers are responsible for the organization of the information in a conversation or text. They determine openings, closings, topic change, and in general everything that involves organizing the information in a conversation or text. They can also express the person’s attitude or feelings at the time the communication happens."
+    },
+    "8" : {
+      "title" : "Connectors",
+      "description" : "A connector is a word or expression that can be used to establish different types of relationships between words or sentences. Their basic function is to help us connect ideas so that our speech is more organized, logical and understandable."
+    },
+    "9" : {
+      "title" : "Fluency Challenge",
+      "description" : "In this exercise you will be presented with some fluency challenges for you to test the way you are applying intonation, rhythm, stress and of course how fluent you can sound when reading or speaking in English."
+    }
+  },
+
+
+  "interactionExercise" : {
+    "0" : {
+      "title" : "How to ASK FOR information?",
+      "description" : "Asking for information in English is a tool you need when taking your Aviation English exam. Here you have some expressions that are going to help you ask for information in a easy and natural way so that the person who is interacting with you, can feel that you are comfortable in the conversation and also you can show interest with no hesitation, Since starting a conversation with direct questions might be rude, you can remember short expressions to ask for simple questions instead."
+    },
+    "1" : {
+      "title" : "How to confirm information?",
+      "description" : "when you are in a conversation, you are naturally going to express a position and opinion on the topic that is being discussed; therefore just like you show yourself spontaneous with your mother tongue, you need to also know how to interact when using English. Now, how can you do it? Start putting into practice these expressions to confirm or clarify information:"
+    },
+    "2" : {
+      "title" : "How to clarify information?",
+      "description" : "Clarifying information or confirming what the other person said or told you can be performed by adding these expressions to your lexical so that the person you are interacting with can feel you are following the idea and you are not able to go on the way without being completely sure about the topic."
+    },
+    "3" : {
+      "title" : "How to give suggestions?",
+      "description" : "For the TEA exam you have to know how to give suggestions to the pilot/ATC/ crew, etc. and for the EALTS exam, you will be constantly asked to suggest ideas when interacting with the other candidate, thus here you have some common phrases people may use to go according to their intentions."
+    },
+    "4" : {
+      "title" : "How to express your opinion",
+      "description" : "The moment you express your opinion, there may be a lot of common mistakes Spanish speakers make, hence you need to prevent those errors by expanding your vocabulary and including new expressions when saying: “In my opinion”or “I think”. In the following chart you will find a short list of words that you can start mixing in order to avoid repetition."
+    },
+    "5" : {
+      "title" : "Do you agree?",
+      "description" : "How often do you hear people saying and repeating! Yes, I agree with you”when having a conversation? That’s a very common mistake that evidences the lack of vocabulary people (candidates) have. Hence, let’s start speaking better; here you have the different ways to express the same feeling."
+    },
+    "6" : {
+      "title" : "What to do when people don’t understand you?",
+      "description" : "Being polite when someone does not understand you is essential in order to keep a nice interaction and make yourself comfortable, so here you have some different ways to retell your point of view."
+    },
+    "7" : {
+      "title" : "Tower, say again!",
+      "description" : "The expression “say again” is part of the phraseology you have to use but when having a common conversation, is that the only option you have to ask for repetition? You know there are several ways to ask for clarification."
+    },
+    "8" : {
+      "title" : "Idiomatic expressions are extremely noteworthy",
+      "description" : "If you want to sound like a native the use of idiomatic expressions has to be part of your English process. And this is because when interacting with other people, you need to demonstrate how close you are to the English/American culture so that people can feel your level of interaction and comfort when speaking English."
+    },
+    "9" : {
+      "title" : "What about your body language?",
+      "description" : "Here you have different tips to take into account when interacting with other people and the ones that will help you get points in your Aviation English exam. Keep in mind that we are humans and having a clean behavior will demonstrate confidence and reliability."
+    }
+  },
+
+
+  "interviewPilot" : {
+    "0" : "Describe yourself as a person and as a pilot.",
+    "1" : "What can you say about your experience as a pilot?",
+    "2" : "Why did you decide to become a pilot?",
+    "3" : "Where did you study to become a pilot and how was that experience?",
+    "4" : "What kind of aircraft have you flown?",
+    "5" : "Can you tell me what differences you can find between/among the aircraft you have flown?",
+    "6" : "How do you consider yourself as a pilot?",
+    "7" : "Would you recommend people to become part of the Aviation world? Why?",
+    "8" : "Talking about non routine situations any pilot can face, is there one that really got an impression on you?",
+    "9" : "What kind of emergencies situations have you encountered over time?",
+    "10" : "Did your family influence on your decision to become a pilot?",
+    "11" : "Describe your family and social life",
+    "12" : "Where have you worked and what work experience have you enjoyed the most?",
+    "13" : "An engine stall is one of the most common situations a pilot can experience. What is a pilot supposed to do in that case?",
+    "14" : "According to all procedures you learnt you follow, which one is the most complex for you?",
+    "15" : "What are the disadvantages to be a pilot?",
+    "16" : "Do you consider that being a pilot is the best profession for men?",
+    "17" : "According to your point of view, are there few women in the aviation context? Why?",
+    "18" : "What are the benefits of being a pilot?",
+    "19" : "How and where do you see yourself in 5 years?",
+    "20" : "What are your lifetime goals?",
+    "21" : "How do you think other people could describe you?",
+    "22" : "What two or three accomplishments have given you the most satisfaction and why?",
+    "23" : "Give me a recent example of a situation you have faced when the 'pressure was on'. What happened? How did you handle it?",
+    "24" : "Give me an example of a decision you had to make quickly or under pressure. How did you approach it and how did it work out?"
+  },
+
+
+
+  "interviewATC" : {
+    "0" : "Describe yourself as a person and as an atc.",
+    "1" : "What can you say about your experience as an atc?",
+    "2" : "Why did you decide to become an atc?",
+    "3" : "What can you say about your study process to become an atc? Did you like it? Why?",
+    "4" : "What kind of airport have you worked in?",
+    "5" : "How do you consider yourself as an atc?",
+    "6" : "Would you recommend people to become part of the Aviation world? Why?",
+    "7" : "Talking about non routine situations any atc can face, is there one that really got an impression on you?",
+    "8" : "What kind of emergencies situations have you encountered over time?",
+    "9" : "Did your family influence on your decision to become an atc?",
+    "10" : "Describe your family and social life",
+    "11" : "Where have you worked and what work experience have you enjoyed the most?",
+    "12" : "An engine stall is one of the most common situations a pilot can experience. What is an atc supposed to do in that case?",
+    "13" : "According to all procedures you learnt you follow, which one is the most complex for you?",
+    "14" : "What are the disadvantages to be an atc?",
+    "15" : "Do you consider that being an atc is the best profession for men?",
+    "16" : "According to your point of view, are there few women in the aviation context? Why?",
+    "17" : "What are the benefits of being an atc?",
+    "18" : "How and where do you see yourself in 5 years?",
+    "19" : "What are your lifetime goals?",
+    "20" : "How do you think other people could describe you?",
+    "21" : "What two or three accomplishments have given you the most satisfaction and why?",
+    "22" : "Give me a recent example of a situation you have faced when the 'pressure was on'. What happened? How did you handle it?",
+    "23" : "Give me an example of a decision you had to make quickly or under pressure. How did you approach it and how did it work out?",
+    "24" : "Talking about the airport you are working now, what kind of traffic do you have to handle?",
+    "25" : "What are the best working conditions an atc should have?",
+    "26" : "What is important to take into account when dealing with hot spots and new pilots landing in the airport?",
+    "27" : "What are the most challenging aspects of being an atc?",
+    "28" : "There are tower, app and radar air traffic controllers, which is the most interesting position and why?"
+  },
+
+
+
+  "tips" : {
+    "0" : "Increase your vocabulary by reading Aviation articles and specialized magazines. Learn the words and expressions of your profession.",
+    "1" : "Improve your knowledge in phraseology by listening to radio communications, take notes of new Aviation-related words, expressions or standard phrases belonging to phraseology.",
+    "2" : "Practice note-taking by listening to a radio communication and writing down the most relevant information. It is important for you to be fast and accurate when taking notes of relevant detailed information; your notes may contain the answer to a question in the listening section or relevant data for an oral report.",
+    "3" : "Improve your fluency by reading aloud sentences, paragraphs, and complete texts. Record your voice when reading, then listen and observe your pronunciation, intonation, stress, and how fluent you sounded. Keep your observations in mind for your next try.",
+    "4" : "Find a practice partner who is also willing to sit and pass the Aviation test. Talk about your Aviation experiences. This could be a great opportunity to improve interaction and comprehension. You could also start feeling more confident about speaking in English.",
+    "5" : "Prepare a presentation about you as a pilot or as an Air Traffic Controller. Practice orally including relevant details about your work and responsibilities in the Aviation world. Find a practice partner, make your presentation and listen to his/hers. Ask questions to each other about your respective presentations. Remember, the key in this exercise is to demonstrate how much English you are able to produce, so say as many things as you can, don’t be shy.",
+    "6" : "Join Aviation forums, interact by commenting and posting, you will find this is a good way to improve your interaction with others in an Aviation environment.",
+    "7" : "Control your emotions. Sitting the Aviation test may be a stressful experience. Therefore, it is very important to be prepared for the pressure derived from a test like this. Your emotions can betray you if the pressure generated by the assessment is not under control; even if you are fluent in Aviation English you may give the wrong impression if you get blocked by nervousness or stress. Relax, trust your knowledge and ability.",
+    "8" : "Expose yourself to radio communications that include a variety of accents. There are several websites that can provide you with a broad range of real radio communications and help you train your comprehension of routine and non-routine situations.",
+    "9" : "Keep you general English in shape, remember that general English is the basis of your communication during the test. Through general English you can get the language skills that complemented with your Aviation English can help you make the best out of your presentation before the tests assessors.",
+    "10" : "The interview with the assessor is your chance to demonstrate how fluent in English you are. Do not be silent, say as many things as you can so that your ability to communicate in English is evident to the assessor. Be prepared for questions about your presentation. Pay attention to your test partner’s presentation as you will have to ask relevant and coherent questions to him.",
+    "11" : "The EALTS back to back task does not really assess your comprehension skill but your interaction with others and your ability to collect information you need. Don’t worry if you are missing parts from the communication to complete your report, the idea with this exercise is that you use your English to get the missing information and complete your report. Remember that all information is important, don’t leave anything out.",
+    "12" : "During the EALTS scenario task make sure you follow the instructions of the Cue Card which will help you organize the ideas of your speech. You will be given one minute to prepare your presentation so make the best out of this time by considering all of the aspects required by the Cue Card.",
+    "13" : "The EALTS listening task will assess your ability to understand in an accurate way messages and information exchanged during a communication. Take clear and accurate notes as you listen to the communication; keep in mind that some of the questions following the audio may be tricky, pay attention to every single detail in the question since a simple word could make a whole difference between an Affirm, a Negative or a Not Stated answer.",
+    "14" : "During the EALTS listening task press the SAY AGAIN button only if necessary; remember that every time you press this button the audios your allowed to hear during the task are reduced by one and so is your chance for a higher score.",
+    "15" : "TEA listening section will expose you to short pieces of a radio communication, be prepare for explaining what you understand, asking questions and giving advice. Your statements, questions and advices shall match the contents of the communication so make sure everything you say is accurate and in connection with the communications.",
+    "16" : "During the TEA listening section and after every audio recording you will be given 20 seconds to think about your answer, use this time to organize your ideas, do not rush into the answer. Keep in mind, though, that you don ́t have much time to react and come up with an accurate answer so be focused for you to provide your answers within the expected periods of time.",
+    "17" : "In case you need repetition of the audio during the TEA listening exercise ask the assessor to play it again, doing so is better than risking and give a wrong, inaccurate answer. Keep in mind that the audio won’t be played a second time, unless you ask.",
+    "18" : "During the TEA describe, compare and discuss part try to describe as much as possible. Talk about what is in the background, foreground, what is happening now, what has happened before now, what will happen next. You will not receive preparation time, so be ready to begin speaking, and respond to the examiners questions promptly.",
+    "19" : "TEA discussion part will require you to connect your ideas and explain yourself. When you do not expand on opinions or statements, the examiner may ask you to explain what you mean. Be prepared to interact with the examiner. Long, confusing answers are not as good as short, informative ones! If you do not understand something, demonstrate that you can clearly ask for help—and the examiner will explain anything you ask about."
+  },
+
+  "initialTestListeningAnswers" : {
+    "0" : ["a","a"],
+    "1" : ["n","a"],
+    "2" : ["a","n"],
+    "3" : ["a","n"],
+    "4" : ["n","n"],
+    "5" : ["a","n","n"],
+    "6" : ["ns","a","n"],
+    "7" : ["n","n","n"],
+    "8" : ["n","a","a"],
+    "9" : ["n","n","n"],
+    "10" : ["a","n","a", "ns"],
+    "11" : ["n","n","n", "n"],
+    "12" : ["n","ns","a", "n"],
+    "13" : ["a","a","a", "ns"],
+    "14" : ["a","a","n", "n"],
+    "15" : ["a","n","a", "n", "a"],
+    "16" : ["a","a","ns", "a", "ns"],
+    "17" : ["n","n","n", "ns", "a"],
+    "18" : ["a","n","a", "ns", "n"],
+    "19" : ["a","n","a", "n", "ns"],
+    "20" : ["a","n","a", "ns", "a"],
+    "21" : ["n","a","n", "a", "n", "ns"],
+    "22" : ["a","a","a", "a", "a", "ns"],
+    "23" : ["n","a","n", "n", "a", "ns"],
+    "24" : ["a","n","a", "n", "n", "a"]
+  }
+
+}

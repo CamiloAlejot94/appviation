@@ -1,0 +1,28 @@
+page-initial-test-content {
+
+    .itParragraph{
+        color : white;
+        font-size: 16px;
+    }
+
+    .itList{
+        margin:0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 100%;
+        min-height: 100%;
+        margin-top:-15%;
+    }
+
+    .itListItem{
+        margin: 20px 0;
+        color:white;
+        text-align: center;
+        font-size: 28px;
+        font-weight: $bold;
+    }
+
+}

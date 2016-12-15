@@ -1,0 +1,60 @@
+page-exercises {
+
+//Puntos : viñetas de los ejercicios (Barra lateral con los puntos para seleccionar los ejercicios)
+.exercises_item {
+	background: url(../assets/img/exItem.svg);
+	position : absolute;
+	top : 48px;
+	left : 12%;
+	width: 25px;
+	height: 880px;
+}
+
+.exercises_listPractice{
+	list-style: none;
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	padding-top: 24px;
+    padding-bottom: 70px;
+
+	//Viñeta izquierda
+	&Item{
+		width: 100%;
+		font-weight: 700;
+		color: #FFF;
+		font-size: 1.6em;
+		margin: 15px 0 17px 0;
+    	padding: 31px 0;
+
+		//Div con el nombre del ejercicio
+		&Text{
+			text-align: left;
+			width: 65%;
+			margin-left: 15%;
+
+			.progressBar{
+				width: 100%;
+				height: 5px;
+				background-color: white;
+				margin-top: 8px;
+				border-radius: 50px;
+
+				.active{
+					background: linear-gradient(to right, #18F70B, #00E676);
+					width: 0;
+					height: 5px;
+					border-radius: 1px;
+				}
+			}
+		}
+
+		&Subtitle{
+			font-size: 13px;
+			color: white;
+			display: block;
+		}
+	}
+}
+
+}

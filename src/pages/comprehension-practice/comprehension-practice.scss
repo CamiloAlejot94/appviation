@@ -1,0 +1,514 @@
+page-comprehension-practice {
+
+//Botón para mostrar el texto de la practica
+.viewTxtPractice{
+	position:absolute;
+	z-index:0;
+	top : 13px;
+	right: 10px;
+	text-align: center;
+	padding : 3px 10px;
+	color : #fff;
+	border : 1px solid #FFF;
+	border-radius: 30px;
+	font-size: 16px;
+	opacity: 0.4;
+}
+
+.contentLoad{
+    margin-top:0;
+}
+
+//Párrafo de introducción a la práctica (antes de la lista de audios)
+.txt-practice{
+	top:0;
+	z-index:3;
+	background-color: #FFF;
+	color : #333;
+	font-size: $p_size;
+	padding : 30px 20px 20px 20px;
+	transition : 300ms;
+	box-shadow: 0 2px 1px #BBB;
+	margin-bottom : 0;
+
+
+	//Animación para ocultar el texto descriptivo
+	&-animation{
+		margin-top:-180px;
+		margin-bottom : 120px;
+	}
+}
+
+//Botón para cerrar el texto descriptivo de la practica
+.close-practice{
+	position : absolute;
+	z-index: 2;
+	right : 0;
+	margin-top : -27px;
+	margin-right: 7px;
+	margin-bottom : 10px;
+	padding : 5px 0;
+	width: 30px;
+	height: 30px;
+	background: rgba(0,0,0,0.1);
+	//background-image: url(../assets/img/close_description.svg);
+	background-image: url(../assets/img/close.svg);
+	border-radius: 100%;
+	color : #ABA;
+	font-weight: $bold;
+	text-align: center;
+}
+
+//Div que en su interior tiene los botones de pausa, play y loading
+.audioPracticeButton{
+	width: 35px;
+	margin-top : -4px;
+	margin-right: 15px;
+}
+
+//=======================DIV PARA EL LISTADO DE AUDIOS==========================
+//ul -> lista para los audios.
+.audio-list-practice{
+	list-style: none;
+	max-width: 100%;
+
+	//Icono del botón play al lado del texto 'Audio #'
+	&-item{
+		width: 30px;
+		height: 30px;
+		background: url(../assets/img/play_practice.svg)no-repeat;
+		float : left;
+        margin-top : -4px;
+		margin-left : -20px;
+		margin-right : 15px;
+
+        &-pause{
+			width: 30px;
+			height: 30px;
+			background: url(../assets/img/play_practice.svg)no-repeat;
+			float : left;
+			margin-top : -4px;
+			margin-left : -20px;
+			margin-right : 15px;
+            background: url(../assets/img/pause_practice.svg)no-repeat;
+        }
+	}
+
+    &-text{
+        width: 100%;
+        text-align: left;
+		font-size: $p_size2;
+		margin-top : 14px;
+    }
+
+	//Propiedades de los items de la lista de audios para reproducir
+	li{
+		color : #FFF;
+		width : 100%;
+        height: 40px;
+		margin-left : -20px;
+		padding:0;
+        border-radius: 0;
+		border-bottom : 1px solid #FFF;
+
+		//Sin linea inferior para el último item de la lista de los audios
+		&:last-child{
+			border : none;
+		}
+	}
+}
+
+//=======================GRABACIÓN==========================
+//Timer con los segundos de grabación (Conteo regresivo)
+.seg-practice{
+	position : absolute;
+	top : 100%;
+	margin-top : -82px;
+	left: 50%;
+	margin-left: -10px;
+	font-size: 45px;
+	color : #FFF;
+}
+
+//Contenedor del boton y del texto para  que el usuario grabe la vaina
+.rec-practice{
+	position : absolute;
+	top : 100%;
+	margin-top : -150px;
+	width: 100%;
+	text-align: center;
+
+	//Descripción sobre el botón para grabar práctica
+	> p{
+		color : #FFF;
+	}
+
+	//Franja de botones para escoger el que el usuario va a enviar
+	.wAudios{
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin : auto;
+		background-color : rgba(255, 255, 255, 0.2);
+		height: 60px;
+		border-radius: 50px;
+
+		.wAudio{
+			margin: 0 auto;
+			font-size: 25px;
+			padding: 5px 14px;
+			border-radius: 100%;
+			border : 1px solid #FFF;
+			color : #FFF;
+			transition: 400ms;
+
+			&-selected{
+				background-color: #FFF;
+				color : $color_base;
+			}
+		}
+	}
+
+	//Botón para grabar la práctica
+	&-button, .stop-practice-button, .repeat-practice-button{
+		border-radius: 100%;
+		width: 65px;
+		height: 65px;
+
+		//Icono para grabar (microfono)
+		.icon-rec{
+			width : 17px;
+			height: 36px;
+			background: url("../assets/img/microphone.svg")no-repeat;
+		}
+
+	}
+	&-button, .repeat-practice-button{
+		background: rgba(255,255,255,0.4);
+	}
+}
+//Gif animado simulando la voz del usuario
+.waveVoice{
+	top : 100%;
+	margin-top: -170px;
+	position:absolute;
+	transition : 300ms;
+}
+
+//Cambio de botón a STOP
+.stop-practice-button{
+	margin-top: 22px;
+	background: red;
+
+	.icon-stop{
+		width : 23px;
+		height: 23px;
+		background: url("../assets/img/stop_record.svg")no-repeat;
+	}
+}
+
+//Boton repetir
+.repeat-practice-button{
+	.icon-stop{
+		width : 65px;
+		height: 30px;
+		background: url("../assets/img/repeat.svg")no-repeat;
+	}
+}
+
+//Vinculo send al lado del boton para grabar
+.send-practice{
+	position : absolute;
+	margin-top : -50px;
+	font-size: 17px;
+	margin-left: 240px;
+}
+
+//Botón de ayuda en la parte inferior derecha de la pantalla
+.help-practice{
+	position : absolute;
+	top : 100%;
+	background: url("../assets/img/help.svg")no-repeat;
+	width: 30px;
+	height: 30px;
+	margin-top : -40px;
+	right: 15px;
+}
+
+//Boton para reproducir el audio grabado al lado izquierdo del boton para grabar
+.play-practice-record{
+	width: 35px;
+	height: 35px;
+	position : absolute;
+	margin-top : -55px;
+	margin-left: 74px;
+	background: url("../assets/img/play_practice.svg");
+}
+
+//Ventana emergente que aparece cuando el usuario toca 'See Script'
+.scriptAudioPractice{
+	position : fixed;
+	top : 100%;
+	width: 100%;
+	height: 240px;
+	margin-top : 0;
+	transition: 200ms;
+	background: #FFF;
+
+	//Animacion del script de abajo para que se delice
+	&-animation{
+		margin-top : -240px;
+	}
+
+	&-title{
+		margin-left : 20px;
+	}
+
+	&-p{
+		margin : 0 20px;
+		overflow-y: scroll;
+		height: 120px;
+	}
+
+	&-button{
+		position : absolute;
+		color : $color_base;
+		font-weight: $bold;
+		top : 100%;
+		width: 100%;
+		margin-top: -50px;
+		margin-left : -0.5px;
+		height: 50px;
+		border-radius : 0;
+	}
+}
+
+.help-practice-content{
+
+	margin-top : -60px;
+
+	//Caja de texto que recibe el dictado
+	input{
+		width: 85%;
+	}
+
+	//Boton para enviar voz a la caja de texto
+	button{
+		height: 30px;
+		width: 30px;
+		background: $color_base;
+		float : right;
+		margin-top : -3px;
+		border-radius: 100%;
+
+		span{
+			margin-left: -3px;
+			width : 30px;
+			height: 16px;
+			background: url("../assets/img/microphone.svg")no-repeat;
+		}
+	}
+}
+//==================================================================================================================================
+//=============================================COMPREHENSION PRACTICE LISTENING====================================================
+//==================================================================================================================================
+
+//Cuadro de texto blanco con la explicación inicial de la práctica que está en la parte superior
+.txtListening {
+	z-index: 5;
+	background-color: #FFF;
+	color : #333;
+	font-size: $p_size;
+	transition : 300ms;
+	height: 200px;
+	padding: 0 10px;
+	padding-top : 9%;
+}
+
+.listen-animation{
+	height: 200px;
+	margin-top:-200px;
+}
+
+//Div general
+.practice-listening{
+
+	//ul listado de audios dentro de la practica
+	&-statements{
+		margin-top : 20px;
+		margin-bottom:50px;
+	}
+}
+
+//Listen audio principal div azul
+.practiceListeningPrincipalAudio{
+	z-index: 1;
+	height: 100px;
+	background-color : $color_base;
+	border:none;
+	border-bottom: 3px solid #FFF;
+
+	&-absolute{
+		position:relative;
+		top:0;
+		margin-top:0;
+		z-index:-1;
+		width:100%;
+	}
+
+	//Botón para reproducir la práctica principal
+	&-listen{
+		border-color: #FFF;
+		color : #FFF;
+		position:relative;
+		top:35%;
+		left:50%;
+		width: 140px;
+		margin-left:-70px;
+		font-weight: $bold;
+		height: 40px;
+	} 
+}
+
+//Lista de audios en la practica de listening
+.statement-content{
+	width: 95%;
+	margin : auto;
+	border-bottom : 1px solid #FFF;
+	display: flex;
+	align-items: center;
+	height: 50px;
+	order: 1;
+
+	//Nombre del audio para la practica de listening
+	>p{
+		color : #FFF;
+		font-size: $p_size2;
+		width: 90%;
+	}
+
+	//.statement-content-res, es el botón que habilita la caja flotante para responder
+	&-res{
+		width: 32px;
+		height: 32px;
+		background: url("../assets/img/empty.svg")no-repeat;
+}
+//Posibles botones por responder en listening
+.affirm{background: url("../assets/img/affirm.svg")no-repeat;}
+.negative{background: url("../assets/img/negative.svg")no-repeat;}
+.notStated{background: url("../assets/img/notStated.svg")no-repeat;}
+
+//Animaciones para agrandar la nube o encogerla
+@keyframes open {
+	0% {width: 0; height:0; opacity: 0}
+	100% { width: 250px; height: 160px; opacity: 1}
+}
+@keyframes close {
+	0% {width: 250px; height: 160px}
+	100% { width: 0; height:0}
+}
+
+//Tarjeta flotante oculta que aparece cuando el usuario va a seleecionar una pregunta
+.float-answer{
+	display: none;
+	animation-duration: 300ms;
+	animation-name: close;
+
+		//Tarjeta flotante desplegada
+		&-view{
+			z-index: 1;
+			position : relative;
+			//right : 219px;
+			float:right;
+			z-index: 10;
+			width: 250px;
+			height: 160px;
+			border-radius : 18px;
+			border : 1px solid #333;
+			background-color : #FFF;
+			transition: 300ms;
+			animation-duration: 300ms;
+			animation-name: open;
+
+			>.list-answer-listening{
+				//display: block;
+				opacity: 1;
+				
+			}
+		}
+}
+
+//Propiedades del listado que contiene las respuestas, texto e imagen
+.list-answer-listening{
+	list-style: none;
+	margin-top:9px;
+	opacity: 0;
+	 
+	&-item{font-size:18px;padding:12px 0;margin-left: -40px;padding-left: 20px;color: $color_base;transition: 600ms;
+		&:active{background-color: #F2F2F2;}
+	}
+	&-img{width:30px;float:left;height:30px;margin-top:-6px;margin-right:10px}
+	&-close{float : right; margin-top : -9px ; margin-right : 0; background-color: rgba(0,0,0,0.1); border-radius: 100%; width: 30px;height: 30px;z-index: 10}
+}
+
+	&:last-child{
+		border : none;
+		//padding-bottom : 50px;
+	}
+}
+
+.doneBtn{
+	position : relative;
+	left:50%;
+	margin-left:-60px;
+	margin-bottom : 30px;
+}
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN MEDIA ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+    
+@media screen and (min-height: 600px)  {
+
+.txt-practice{
+	font-size: $p_size + 0.1em;
+}
+
+.audio-list-practice{// ul : listado general que muestra los audios de la practica en comprehension
+
+    &-item{//Botón de reproducción de la práctica
+		width: 40px !important;
+		height: 40px !important;
+	}
+
+    li{ //Item del ul anterior
+        height: 47px !important;
+	}
+}
+} //Termina MediaQuery para pantalla media
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+
+@media screen and (min-height: 685px)  {
+
+.audio-list-practice{// ul : listado general que muestra los audios de la practica en comprehension
+
+    &-item{ //Botón de reproducción de la práctica
+		width: 45px !important;
+		height: 45px !important;
+	}
+
+    &-text, .statement-content>p{ //Texto interno que muestra la palabra 'Audio 1'
+		font-size: 1.6em !important;
+    }
+
+    li{ //Item del ul anterior
+        height: 60px !important;
+	}
+}
+} //Termina MediaQuery para pantalla alta
+
+}

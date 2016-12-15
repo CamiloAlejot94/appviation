@@ -1,0 +1,28 @@
+<ion-content padding class="ws-bg">
+
+
+  <ion-icon class="closeModal" ios="md-close" md="md-close" (click)="closeModal()"></ion-icon>
+
+  <div class="tipsContent">
+
+    <!--
+      TITULO PRINCIPAL DE LA PÁGINA
+    -->
+    <h1 class="tipTitle">TIP</h1>
+
+
+    <!--
+      CONTENIDO DEL TIP
+    -->
+    <p class="tipDescription">
+      {{tip}} 
+      <ion-spinner class="ws-loader white" *ngIf="!tip"></ion-spinner>
+    </p>
+
+  </div>
+
+
+  <button class="tipButton" (click)="goIt()">GOT IT</button>
+
+
+</ion-content>

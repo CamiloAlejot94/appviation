@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar class="toolbar-ws">
+    <ion-title>ICAO Standars</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader blue"></ion-spinner>
+  </div>
+
+  <div class="contentLoad" *ngIf="contentLoad">
+      
+    <h1 class="wsTitle-ex">{{title}}</h1>
+
+    <p class="wsDescription-ex">
+      {{description}}
+    </p>
+
+    <h1 class="wsTitle-ex">Levels</h1>
+
+    <div class="ICAO_levels">
+      <div *ngFor="let level of levels" [ngClass]="['ICAO_level', level.cl]" (click)="pushLevel(level.id)">{{level.id}}</div>
+    </div>
+
+    <p class="wsDescription-ex">
+      {{levels[select].description}}
+    </p>
+
+    <button class="ws-btn1 ICAO_done" ion-button (click)="goToExercises()">Done</button>
+  </div>
+
+</ion-content>

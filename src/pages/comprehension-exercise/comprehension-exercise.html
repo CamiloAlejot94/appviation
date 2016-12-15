@@ -1,0 +1,81 @@
+<ion-header>
+
+  <ion-navbar class="toolbar-ws">
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader blue"></ion-spinner>
+  </div>
+
+  <div class="contentLoad" *ngIf="contentLoad">
+
+  <h1 class="h1-ws practice-exercise-title" padding>{{subtitle}}</h1>
+
+  <div class="txt-ws practice-exercise-description">
+  {{description}}
+
+  <!--
+    Lista del ejercicio 3 (Affirm, Negative, Not stated)
+  -->
+  <div class="pedl" *ngIf="pedl">
+    <div class="pedl-content">
+      <p class="pedl-content-item">
+        <img class="item-listening" src="assets/img/affirm.svg" alt="">Affirm
+      </p>
+      <p class="pedl-content-item">
+        <img class="item-listening" src="assets/img/negative.svg" alt="">Negative
+      </p>
+      <p class="pedl-content-item-large">
+        <img class="item-listening" src="assets/img/notStated.svg" alt="">Not stated
+      </p>
+    </div>
+    <div class="pedl-content">
+      <p class="pedl-content-des">
+        (if the statement is correct)
+      </p>
+      <p class="pedl-content-des">
+        (if the statement is not correct)
+      </p>
+      <p class="pedl-content-des">
+        (if the information in the statement is not mentioned during the communication)
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions">
+  <ion-slide *ngFor="let practice of practices" class="practice-slide">
+
+    <button class="practice-exercise-figure" (click)="goToPractice(practice.val)" ion-button>
+      {{practice.name}}<br>
+      <p class="figure-range">
+        0 of {{practice.exercises}}
+      </p>
+    </button>
+
+  </ion-slide>
+</ion-slides>
+
+
+    </div>
+
+<!-- Swiper 
+    <div class="swiper-container" style="height:135px; margin-top : 20px">
+        <div class="swiper-wrapper">
+            <div *ngFor="let practice of practices" ion-button class="swiper-slide" style="background-color:#333;color:#FFF;margin-left:15px">{{practice.name}}</div>
+        </div>
+    </div>
+-->
+</ion-content>

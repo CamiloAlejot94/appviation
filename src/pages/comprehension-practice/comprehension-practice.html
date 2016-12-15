@@ -1,0 +1,198 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ws-bg">
+
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader white"></ion-spinner>
+  </div>
+
+
+  <!--
+    Todo el contenido de la web para cargar
+  -->
+  <div class="contentLoad" *ngIf="contentLoad">
+<!--=========================================================================================================================================
+=======================================================CONTENIDO GENERAL PARA LA PRACTICA=======================================================
+===============================================================================================================================================-->
+
+<div *ngIf="noListening">
+
+  <div>
+    <!--Botón para abrir la información-->    
+    <div (click)="txtPractice=!txtPractice" class="viewTxtPractice">Information</div>
+    <!--Parrafo descriptivo de la práctica (Superior)-->
+    <div class="txt-practice txtPractice" [class.txt-practice-animation]="txtPractice">
+    <!--Botón flotante para cerrar la descripción de la práctica-->
+    <div class="close-practice" (click)="txtPractice=!txtPractice"></div>
+    {{section}}
+    </div>
+  </div>
+
+  <!--(click)="playAudio(audio.link, audio.name)"
+    Listado de audios
+  -->
+  <div>
+
+    <ul class="audio-list-practice">
+      <li ion-button *ngFor = "let audio of audios" (click)="playAudio(audio.name, audio.link)" clear>
+        <!--<span [ngClass]="['audio-list-practice-item', 'audio.play']"></span>-->
+        <div class="audioPracticeButton">
+          <img [src]="playBackButton" alt="">
+        </div>
+        <!--<span [ngClass]="['audio-list-practice-item-pause', 'audio.play']" *ngIf="audio.play"></span>-->
+        <p class="audio-list-practice-text">
+        {{'Audio ' + audio.name}}</p>
+
+        <!--
+        Muestra el script, pasandole como parametros el nombre y su descripcion
+        
+        <span [ngClass]="seeScriptClass[audio.name-1]" (click)="scriptAudioPracticeComponents(audio.name, audio.script)">{{seeScript[audio.name - 1]}}</span>-->
+      </li>
+    </ul>
+
+  </div>
+
+  <!--
+    Conteo regresivo para grabar
+  -->
+  <p class="seg-practice" *ngIf="segPractice">
+    {{seg}}
+  </p>
+
+  <div class="rec-practice">
+
+  <p>{{p1}}<br>{{p2}}</p>
+  <button ion-button class="rec-practice-button" *ngIf="recb" (click)="recPractice()">
+    <span class="icon-rec"></span>
+  </button>
+
+  <!--
+    Franja de botones en donde el usuario selecciona el audio que desa grabar
+  -->
+  <div *ngIf="wAudiob" (click)="whichAudio()" class="wAudios">
+    <div [ngClass]="['wAudio', wAudioClass[audio.name-1]]" *ngFor = "let audio of audios" (click)="whichAudio(audio.name)" onclick="setTimeout(startRecording, 3000);">{{audio.name}}</div>
+  </div>
+
+  <!--
+    Botón para pausar la grabación
+  -->
+  <button ion-button *ngIf="stopb" class="stop-practice-button" color="danger" (click)="stopPractice()" onclick="stopRecording(this);">
+    <span class="icon-stop"></span>
+  </button>
+
+  <!--
+    Botón para volver a grabar
+  -->
+  <button ion-button class="repeat-practice-button" *ngIf="repeatb" (click)="repeatPractice()" onclick="setTimeout(startRecording, 3000);" color="light">
+    <span class="icon-stop"></span>
+  </button>
+
+  <!--
+    Botón para enviar el audio grabado
+  -->
+  <p class="send-practice" (click)="sendAudio()" *ngIf="sendb">Send</p>
+
+  <!--
+    Botón para reproducir el audio que el usuario acaba de grabar
+  -->
+  <div class="play-practice-record" *ngIf="playb" onclick="playRecord();"></div>
+
+</div>
+
+<!--
+  Botón de ayuda en la parte inferior derecha de la pantalla
+-->
+<div class="help-practice" *ngIf="helpb" (click)="scriptAudioPracticeComponents('', '')"></div>
+
+<!--
+  Este script que aparece en la parte inferior de la pantalla con la info del audio
+-->
+<div class="scriptAudioPractice" [class.scriptAudioPractice-animation]="script">
+  <h3 class="scriptAudioPractice-title">{{scriptTitle}}</h3>
+  <p class="scriptAudioPractice-p"> {{scriptText}}<br>{{aux1}}</p>
+  <div class="help-practice-content" padding *ngIf="helpPractice">
+    <input type="text">
+    <button><span> </span></button>
+  </div>
+  <button class="scriptAudioPractice-button" (click)="script=!script" light>Close</button>
+</div>
+
+<ul id="recordingslist" style="display:none">
+</ul>
+<audio style="display:none" id="recording"></audio>
+</div>
+
+<!--=========================================================================================================================================
+  =======================================Este contenido solamente aparece cuando la practica es listening=======================================
+===============================================================================================================================================-->
+<div class="practice-listening" *ngIf="pListening"> <!--Este div se oculta cuando no esta en los ejercicios 3,6,9 o 10-->
+
+  <!--
+    INFORMACIÓN DE LA PRÁCTICA
+  -->
+    <!--Botón para abrir la información-->    
+    <div (click)="txtListening=!txtListening" class="viewTxtPractice">Information</div>
+    <!--Parrafo descriptivo de la práctica (Superior)-->
+    <div class="txtListening" [class.listen-animation]="txtListening">
+    <!--Botón flotante para cerrar la descripción de la práctica-->
+    <div class="close-practice" (click)="txtListening=!txtListening"></div>
+    {{section}}
+    </div>
+    
+  <!--
+    TERMINA INFORMACIÓN DE LA PRÁCTICA
+  -->
+
+  <!--
+    LISTEN AUDIO PRINCIPAL
+  -->
+  <div class="practiceListeningPrincipalAudio" [class.practiceListeningPrincipalAudio-absolute]="txtPractice" *ngFor = "let audio of audios">
+    <button ion-button outline round class="practiceListeningPrincipalAudio-listen" (click)="playAudio(audio.name, audio.link)" ><img src="assets/img/listen_white.svg" alt="" width="15px">&nbsp;&nbsp;LISTEN</button>
+  </div>
+  <!--
+    TERMINA LISTEN AUDIO PRINCIPAL
+  -->
+
+  <!--
+    LISTADO DE LOS AUDIOS PARA LAS PRÁCTICAS
+  -->
+  <div class="practice-listening-statements" [class.practice-listening-statements-move]="txtPractice">
+    <div class="practice-listening-statements-item">
+      <div class="statement-content" *ngFor="let statement of statements">
+        <div class="audioPracticeButton" (click)="playAudio(statement.val, statement.link)">
+          <img [src]="playBackButton" alt="">
+        </div>
+        <p>Audio {{statement.val}}</p>
+        <div [ngClass]="['statement-content-res', statement.select]" (click)="viewFloatStatement(statement.id)">
+          <div [ngClass]="[statement.cl]">
+            <ul class="list-answer-listening">
+              <div class="list-answer-listening-close"><img src="assets/img/close.svg" alt=""></div>
+              <li class="list-answer-listening-item" (click)="selectStatement(statement.id, 1)"><img class="list-answer-listening-img" src="assets/img/affirm.svg" alt="">Affirm</li>
+              <li class="list-answer-listening-item" (click)="selectStatement(statement.id, 2)"><img class="list-answer-listening-img" src="assets/img/negative.svg" alt="">Negative</li>
+              <li class="list-answer-listening-item" (click)="selectStatement(statement.id, 3)"><img class="list-answer-listening-img" src="assets/img/notStated.svg" alt="">Not stated</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    TERMINA LISTADO DE LOS AUDIOS PARA LAS PRÁCTICAS
+  -->
+
+  <button ion-button class="ws-btn2 doneBtn" (click)="doneListening(pageListening)">Done</button>
+
+</div> <!--Termina div de los listening practice 3, 6, 9 y 10-->
+
+
+  </div> <!--Termina contentLoad-->
+
+</ion-content>

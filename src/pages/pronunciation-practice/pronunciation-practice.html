@@ -1,0 +1,109 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Practice {{practice}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ws-bg">
+
+  <!--
+    Spinner para cargar el contenido
+  -->
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader white"></ion-spinner>
+  </div>
+
+  <!--
+    Contenido web
+  -->
+  <div class="contentLoad" *ngIf="contentLoad">
+
+    <!--Descripción de la página-->
+    <div class="pronunciationPractice-description">
+      <div class="pronunciationPractice-descriptionClose" (click)="desPractice=!desPractice"></div>
+      <p class="pronunciationPractice-descriptionText">{{description}}</p>
+    </div>
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      PRIMER ESTILO DE PRACTICAS
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="pronunciationPractice-1" *ngIf="prac1">
+      <h1 class="pronunciationPractice-1-title">Example</h1>
+      <p class="pronunciationPractice-1-description">*You hear: Tango / Oscar / Whiskey / Echo / Romeo <br>*You write: TOWER</p>
+
+      <!--SLIDES-->
+      <ion-slides class="pronunciationPractice-1-slides" [options]="pronunciationPracticeSlideOptions">
+        <ion-slide *ngFor="let audio of prac1Audios">
+
+          <!--TARJETAS-->
+          <div class="pronunciationPractice-card pronunciationPractice-1-card">
+            <div class="pronunciationPractice-1-cardIcons">
+              <img src="assets/img/play_practice.svg" alt="" width="30">
+            </div>
+            <h1 class="pronunciationPractice-1-cardTitle">Audio {{audio.val}}</h1>
+            <input class="pronunciationPractice-1-cardText" type="text" placeholder="texto pendiente">
+          </div>
+          <!--FINALIZA TARJETAS-->  
+
+        </ion-slide>
+      </ion-slides>
+      <!--FINALIZA SLIDES-->
+
+      <button ion-button class="ws-btn-send pronunciationPractice-send">Send</button>
+
+    </div>
+    <!--FINALIZA PRIMER ESTILO DE PRACTICAS-->
+
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      SEGUNDO ESTILO DE PRACTICAS
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="pronunciationPractice-2" *ngIf="prac2">
+
+      <!--SLIDES-->
+      <ion-slides class="pronunciationPractice-2-slides" [options]="pronunciationPracticeSlideOptions">
+        <ion-slide *ngFor="let audio of prac2Audios">
+        <!--TARJETAS-->
+        <div class="pronunciationPractice-card pronunciationPractice-2-card">
+          <div class="pronunciationPractice-2-cardIcons">
+            <img src="assets/img/play_practice_blue.svg" alt="" width="40">
+          </div>
+          <h1 class="pronunciationPractice-2-cardTitle">{{audio.word}}</h1>
+          <p class="pronunciationPractice-2-complete">{{prac2Response}}</p>
+        </div>
+        <!--FINALIZA TARJETAS-->
+        </ion-slide>
+      </ion-slides> 
+      <!--FINALIZA SLIDES-->
+
+      <!--NÚMEROS PARA ESCOGER-->
+      <p class="pronunciationPractice-2-description">Choose the missing number</p>
+      <div class="pronunciationPractice-2-options">
+        <button ion-button class="pronunciationPractice-2-optionsButton" (click)="putNumber('07')">07</button>
+        <button ion-button class="pronunciationPractice-2-optionsButton">100</button>
+        <button ion-button class="pronunciationPractice-2-optionsButton">50</button>
+        <button ion-button class="pronunciationPractice-2-optionsButton">47</button>
+        <button ion-button class="pronunciationPractice-2-optionsButton">455</button>
+        <button ion-button class="pronunciationPractice-2-optionsButton">180</button>
+      </div>
+      <!--FINALIZA NÚMEROS PARA ESCOGER-->
+
+      <button ion-button class="ws-btn-send pronunciationPractice-send">Send</button>
+
+    </div>
+    <!--FINALIZA SEGUNDO ESTILO DE PRACTICAS-->
+    
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      TERCER ESTILO DE PRACTICAS
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="pronunciationPractice-3" *ngIf="prac3">
+
+    </div>
+
+  </div>
+
+</ion-content>

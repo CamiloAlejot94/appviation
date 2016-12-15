@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-left clear (click)="dismiss()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+    <ion-title>ICAO {{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ws-bg">
+
+  <div class="icon-alphabet" *ngIf="sound"></div>
+  <div class="numListWord" *ngIf="numbers">{{number}}0</div>
+
+  <select id="listWords" style="display:none">
+    <option *ngFor="let word of words" value="{{word.spell}}">{{word.word}}</option>
+  </select>
+
+</ion-content>

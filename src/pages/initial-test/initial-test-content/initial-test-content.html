@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>EALTS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="ws-bg">
+
+  <!--
+    PARRAFO DE INICIAL TEST it
+  -->
+  <p class="itParragraph">
+      Please select one of the following options to start, you will have to do them all. 
+  </p>
+
+  <ul class="itList">
+    <li class="itListItem" (click)="goToListening('Interview')">Interview</li>
+    <li class="itListItem" (click)="goToListening('Scenario')" >Scenario</li>
+    <li class="itListItem" (click)="goToListening('Back to back')" >Back to back</li>
+    <li class="itListItem" (click)="goToListening('Listening')" >Listening</li>
+  </ul>
+
+</ion-content>

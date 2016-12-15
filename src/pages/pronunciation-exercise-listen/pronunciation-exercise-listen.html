@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar class="toolbar-ws">
+    <ion-title>Exercise {{numExercise}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader blue"></ion-spinner>
+  </div>
+
+  <div class="contentLoad" *ngIf="contentLoad">
+
+    <h1 class="title-ICAO" (click)="pushDescription()">{{title}}</h1>
+
+    <div class="icaoButtons" *ngIf="icaoComponents">
+      <button ion-button [ngClass]="[btnAlpClass]" (click)="icaoOptions('alp')">Alphabet</button>
+      <button ion-button [ngClass]="[btnNumClass]" (click)="icaoOptions('num')">Numbers</button>
+    </div>
+
+    <p class="txt-ws ICAO_description">
+        {{description}}
+      </p>
+
+    <button ion-button class="icaoButtonListen btn-border" *ngIf="icaoComponents" (click)="openModal({charNum: optionICAO})" outline round><img src="assets/img/listen_blue.svg" width="18" alt="">&nbsp;&nbsp;LISTEN</button>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button class="icaoButtonSkip" *ngIf="icaoComponents" (click)="goToSkip(numExercise)" full>SKIP</button>
+</ion-footer>

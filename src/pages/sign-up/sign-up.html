@@ -1,0 +1,62 @@
+<ion-content padding class="ws-bgWhite">
+
+  <ion-icon (click)="goToBack()" class="back" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+
+  <h1 class="signTitle">Sign Up</h1>
+
+  <div class="signPicture">
+    <div class="signBorderPicture">
+       <div class="signContentPicture">
+         <p>Profile pic</p>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    FORMULARIO DE REGISTRO
+  -->
+  <div class="signUpForm">
+
+    <!--
+      NOMBRE
+    -->
+    <div>
+      <label for="sName" class="session_lbl"><img src="assets/img/iconName.svg" width="22" alt=""></label>  
+      <input #sName class="session_input" type="name" placeholder="name">
+    </div>
+
+    <!--
+      EMAIL
+    -->
+    <div>
+      <label for="sEmail" class="session_lbl"><img src="assets/img/iconMail.svg" width="22" alt=""></label>  
+      <input #sEmail class="session_input" type="email" placeholder="email">
+    </div>
+
+    <!--
+      USUARIO
+    -->
+    <div>
+      <label for="sUsername" class="session_lbl"><img src="assets/img/loginUser.svg" height="22" alt=""></label>  
+      <input #sUsername class="session_input" type="text" placeholder="username">
+    </div>
+
+    <!--
+      CONTRASEÑA
+    -->
+    <div>
+      <label for="sPassword" class="session_lbl"><img src="assets/img/loginPass.svg" height="22" alt=""></label>  
+      <input #sPassword class="session_input" type="password" placeholder="password">
+    </div>
+
+  </div>
+
+
+  <!--
+    BOTÓN PARA CONTINUAR signUp(sName.value, sEmail.value, sUsername.value, sPassword.value)
+  -->
+  <button (click)="showRadio(sName.value, sEmail.value, sUsername.value, sPassword.value)" class="signBtn btn_gradient" ion-button large>
+    Sign up
+  </button>
+
+</ion-content>

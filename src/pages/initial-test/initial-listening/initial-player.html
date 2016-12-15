@@ -1,0 +1,36 @@
+<ion-content>
+
+    <ion-icon class="closeModal" ios="ios-arrow-down" md="ios-arrow-down" (click)="closeModal()"></ion-icon>
+
+    <div class="header">
+        <h1 class="title">Nombre del audio</h1>
+        <div class="image"></div>
+    </div>
+
+    <div class="audioControls">
+
+        <ion-range class="lineAudio" min="0" max="100" [(ngModel)]="audioTime">
+            <ion-label range-left>00:00</ion-label>
+            <ion-label range-right>03:20</ion-label>
+        </ion-range>
+
+        <div class="buttons">
+
+            <!--
+                BOTÓN PARA RETROCEDER UN POCO EL AUDIO
+            -->
+            <ion-icon class="backPlay" ios="md-undo" md="md-undo"></ion-icon>
+
+            <ion-icon class="play play-space" (click)="playAudio('https://firebasestorage.googleapis.com/v0/b/wordsinc-da3e2.appspot.com/o/initialTest%2FbackToBack%2F1.mp3?alt=media&token=3c1298b4-27d3-4b92-a109-2832a83ab47a')" *ngIf="playBtn" ios="ios-play" md="ios-play"></ion-icon>
+            <ion-icon class="play" (click)="pauseAudio()" *ngIf="pauseBtn" ios="ios-pause" md="ios-pause"></ion-icon>
+            <!--
+                BOTÓN PARA ADELANTAR UN POCO EL AUDIO
+            -->
+            <ion-icon (click)="timeUpdate()" class="advancePlay" ios="md-redo" md="md-redo"></ion-icon>
+
+        </div>
+
+    </div>
+    
+
+</ion-content>

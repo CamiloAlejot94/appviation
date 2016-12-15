@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="ws-bg">
+
+  <div class="exercises_item"></div>
+
+  <ul class="exercises_listPractice">
+    <li *ngFor="let exercise of exercises" class="exercises_listPracticeItem" (click)="goToExercise(page, exercise.ex)" ion-button clear>
+      <div class="exercises_listPracticeItemText">
+        Exercise
+        <span class="exercises_listPracticeItemSubtitle">{{exercise.title | slice:0:27}}</span>
+        <div class="progressBar">
+          <div class="active"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+<!--jsdyfg-->
+
+</ion-content>
+
+<ion-footer>
+  <div class="btnGroup">
+    <button ion-button class="btnTest" full><span class="quick-img"></span>&nbsp;Quick test</button>
+    <button ion-button class="btnTest" full><span class="final-img"></span>&nbsp;Final test</button>
+  </div>
+</ion-footer>

@@ -1,0 +1,251 @@
+<ion-header>
+
+  <ion-navbar>
+    <!--
+      RECIBE NOMBRE DEL CONTROLADOR
+    -->
+    <ion-title>{{titlePage}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ws-bg">
+
+  <!--
+    PESTAÑA DE DIV DESPLEGABLE
+  -->
+  <div class="flange" (click)="eeInfo=!eeInfo">
+    Information
+  </div>
+  <!--
+    INFORMACIÓN DESPLEGABLE SEGÚN LA CATEGORÍA.
+  -->
+  <div class="eeInfo"  [class.eeInfo-animation]="eeInfo">
+    <p class="cueCard" *ngIf="cueCard" (click)="showCueCard()">CUE CARD</p>
+    <!--
+      ICONO PARA CERRAR DIV BLANCO
+    -->
+    <button class="closeInfo" (click)="eeInfo=!eeInfo">
+      <ion-icon ios="md-close" md="md-close"></ion-icon>
+    </button>
+    <!--
+      CONTENIDO DEL DIV BLANCO
+    -->
+    <P>
+      {{divWhiteDescription}}
+    </P>
+  </div>
+
+
+  <!--
+    AUDIO CENTRAL PARA LISTENING
+  -->
+  <div class="audioListening" *ngIf="listen">
+    <button ion-button outline *ngIf="playBtn" round (click)="playAudio(linkAudioListening, 'play')">
+      <ion-icon ios="ios-play"  md="ios-play"></ion-icon> 
+      LISTEN {{ios}}
+    </button>
+    <button ion-button outline *ngIf="pauseBtn" round (click)="pauseAudio()">
+      <ion-icon ios="ios-pause"  md="ios-pause"></ion-icon> 
+      LISTEN {{ios}}
+    </button>
+  </div>
+
+
+  <!--
+    SUBTITULO ADICIONAL, POR AHORA SOLO APARECE EN BACK TO BACK
+  -->
+  <div class="eeSubtitleContent" *ngIf="subtitle">
+    <p class="eeSubtitle">
+      {{subtitleText}}
+    </p>
+  </div>
+
+  <!--
+    LISTADO DE PREGUNTAS PARA LA ENTREVISTA
+  -->
+  <div class="menuQuestionInterview">
+    <div class="loader">
+      <ion-spinner class="ws-loader white" *ngIf="!questions"></ion-spinner>
+    </div>
+    <div *ngFor="let question of questions">
+
+      <div class="question">
+        <!--Pregunta que se le hace-->
+        <p>{{question.val}}</p>
+      </div>
+
+      <div class="play-menu" *ngIf=question.audio>
+        <!--Botón para reproducir la grabación-->
+        <button ion-button class="play-question" onclick="playRecord()">
+          <ion-icon ios="ios-play" md="md-play"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--
+    LISTADO DE AUDIOS
+  -->
+  <div class="list_audio" *ngIf="listAudio">
+
+    <!--
+      AUDIO INDIVIDUAL
+    -->
+    <div class="audio" >
+      <!--Botón play / pause-->
+      <!--<button class="audio_btn" *ngIf="audioPlay" (click)="playAudio('https://firebasestorage.googleapis.com/v0/b/wordsinc-da3e2.appspot.com/o/initialTest%2FbackToBack%2F1.mp3?alt=media&token=3c1298b4-27d3-4b92-a109-2832a83ab47a')">
+        <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+      </button>-->
+      <!--<button class="audio_btn" *ngIf="!audioPlay" (click)="pauseAudio()">
+        <ion-icon class="iconPause" ios="ios-pause" md="ios-pause"></ion-icon>
+      </button>-->
+      <!--Nombre del audio-->
+      <p class="audio_name">Audio 1</p> <br>
+      <p class="audio_description">Initial test - Back to back</p>
+
+      <img class="audio_gif" src="http://i339.photobucket.com/albums/n442/mcrmy_derick/equalizer.gif" alt="">
+      <!--
+      BOTONES DE PLAY - PAUSE
+      -->
+      <button class="playBtn" *ngIf="playBtn" (click)="playAudio('https://firebasestorage.googleapis.com/v0/b/wordsinc-da3e2.appspot.com/o/initialTest%2FbackToBack%2F1.mp3?alt=media&token=3c1298b4-27d3-4b92-a109-2832a83ab47a', 'Audio 1')">
+        <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+      </button>
+      <button class="playBtn" *ngIf="pauseBtn" (click)="pauseAudio()">
+        <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+      </button>
+    </div>
+
+  </div>
+
+
+  <!--
+    LISTADO DE AUDIOS PARA SELECCIÓN MULTIPLE
+  -->
+  <div class="list_audio_listening" *ngIf="listen">
+
+    <!--
+      AUDIO INDIVIDUAL
+    -->
+    <div class="audio" *ngFor="let statement of statements">
+      <!--Botón play / pause-->
+      <button class="audio_btn" *ngIf="titlePage == Listening">
+        <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+      </button>
+      <!--Nombre del audio-->
+      <p class="audio_name">{{statement.name}}</p>
+      <p class="audio_description">Audio {{audioListening+1}}</p>
+
+      <button [ngClass]="['audio_answer', statement.answer]" (click)="response(statement.id)">
+      </button>
+
+      <div [ngClass]="['float-div', statement.class]">
+        <div class="float-div-close" (click)="response(statement.id)">
+          <ion-icon ios="md-close" md="md-close"></ion-icon>
+        </div>
+        <div class="answer" >
+          <div class="answer-affirm" (click)="response(statement.id, 'a')"></div>
+          <div class="answer-text">Affirm</div>          
+        </div>
+        <div class="answer">
+          <div class="answer-negative" (click)="response(statement.id, 'n')"></div>
+          <div class="answer-text">Negative</div> 
+        </div>
+        <div class="answer">
+          <div class="answer-notStated" (click)="response(statement.id, 'ns')"></div>
+          <div class="answer-text">Not stated</div> 
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</ion-content>
+
+
+<!--
+  CONTENIDO INFERIOR DE LA PANTALLA
+-->
+<ion-footer>
+
+  <!--<div class="recorderMenu"></div>-->
+
+  <!--
+    REPRODUCTOR DE MUSICA INFERIOR
+  -->
+  <!--<div class="player">-->
+
+
+    <!--<ion-icon class="audioMax" (click)="showPlayer()" ios="ios-arrow-up" md="ios-arrow-up"></ion-icon>-->
+    <!--<img style="position:absolute;margin-left:4%;width:30px;margin-top:14px" *ngIf="gif" src="http://i339.photobucket.com/albums/n442/mcrmy_derick/equalizer.gif" alt="">-->
+    <!--
+      TEXTOS DEL AUDIO
+    -->
+    <!--<P class="audioName">{{audioName}}</P> <br>-->
+    <!--<P class="audioDescription">Initial test - Back to back</P>-->
+
+    <!--
+      BOTONES DE PLAY - PAUSE
+    -->
+    <!--<button class="playBtn" *ngIf="playBtn" (click)="playAudio()">
+      <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+    </button>
+    <button class="playBtn" *ngIf="pauseBtn" (click)="pauseAudio()">
+      <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+    </button>
+  </div>-->
+
+  <!--
+    TERMINA EL REPRODUCTOR DE AUDIO INFERIOR
+  -->
+  
+
+  <!--Botón de ayuda-->
+  <ion-icon class="menu_rec_help"  ios="md-help-circle" md="md-help-circle" (click)="helpMenu()"></ion-icon>
+
+  <div class="menu_rec">
+
+    <button *ngIf="sendBtn" class="sendBtn" (click)="sendAnswer(audioListening)">Send</button>
+
+    <!--tooltip con indicaciones para grabar-->
+    <div class="menu_rec_tooltip tooltip" [class.invisible]="tooltip" (click)="tooltip=!tooltip">
+      <p>
+        Tap to record, <br>
+        tap again to stop.
+      </p>
+      <div class="menu_rec_tooltip_indicator"></div>
+    </div>
+    
+    <!--Botón para reproducir el audio que grabé-->
+    <button class="menu_rec_play" onclick="playRecord();" *ngIf="playBtnRecord">
+      <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+    </button>
+    <!--Botón redondo para grabar-->
+    <button class="menu_rec_btn" *ngIf="recBtn" onclick="startRecording();" (click)="startRecord(titlePage)">
+      <ion-icon ios="ios-mic" md="ios-mic"></ion-icon>
+    </button>
+    <!--Botón redondo para detener-->
+    <button class="menu_rec_stop_btn" onclick="stopRecording(this);" (click)="stopRecord(titlePage)" *ngIf="stopBtn">
+      <ion-icon ios="md-square" md="md-square"></ion-icon>
+    </button>
+    <!--Enviar el audio que el usuario acaba de grabar-->
+    <p class="menu_rec_time" (click)="showLoading('Sending...')" *ngIf="sendRecord">Send</p>
+    <!--Tiempo de grabación-->
+    <p class="menu_rec_time" *ngIf="timeLbl">
+      <!--{{min}}:{{sec}}-->
+      <span *ngIf="min<10">0{{min}}</span>
+      <span *ngIf="min>9">{{min}}</span>
+      <span>:</span>      
+      <span *ngIf="sec<10">0{{sec}}</span>
+      <span *ngIf="sec>9">{{sec}}</span>
+    </p>
+
+  </div>
+  <audio id="recording" preload="auto"></audio>
+</ion-footer>

@@ -1,0 +1,139 @@
+page-about-initial-test {
+
+    // Titulo general
+    .aboutTitle{
+        color: #222;
+        font-size: 25px;
+        font-weight: $bold;
+        margin : 0;
+    }
+
+    // Subtitulo general
+    .aboutSubtitle, .aboutTitleParragraph{
+        color : #555;
+        font-size: 17px;
+        font-weight: $bold;
+        margin-top : 13px;
+    }
+
+    .aboutTitleParragraph{
+        margin-top: 20px;
+    }
+
+    // Parrafo general
+    .aboutParragraph{
+        font-size: 16px;
+        font-weight: $regular;
+        color: #777;   
+        margin-top:10px;
+        margin-bottom:20px;
+    }
+
+    // Espacio antes del titulo
+    .hasTitle{
+        width: 100%;
+        margin : 0;
+        margin-bottom: 40px;
+    }
+
+    // Listado
+    .aboutList{
+
+        padding-left: 8%;
+
+        // Titulo de la lista
+        &Title{
+            color : #555;
+            font-size: 18px;
+            font-weight: $bold;
+            margin-top : 13px;
+        }
+
+        // Items de la lista
+        &Item{
+            color : #777;
+            font-size: 16px;
+            list-style: none;
+            font-weight: $regular;      
+        }
+
+    }
+
+    .orderList{
+        padding: 0 20px;
+
+        li{
+            font-size: 16px;
+            margin:10px 0;
+            color:#777;
+        }
+    }
+
+    // Fuente
+    .aboutSource{
+        margin: 35px 0 20px 0;
+        font-style: italic;
+        font-size: 16px;
+        font-weight: $bold;
+        color: #333;
+        width: 100%;
+        text-align: right;
+    }
+
+    .aboutDone{
+        background-color: $color_base;
+        color: white;
+        margin:0;
+    }
+
+}
+
+page-tips-test {
+
+    .closeModal{
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        color: white;
+        font-size: 25px;
+        font-weight: $bold;
+    }
+
+    .tipsContent{
+        min-width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tipTitle{
+        color: white;
+        text-align: center;
+        font-weight: $bold;
+    }
+
+    .tipDescription {
+        color : white;
+        text-align: center;
+        margin-top : 10%;
+        font-size: 16px;
+    }
+
+    .tipButton{
+        position : absolute;
+        top : 90%;
+        left: 50%;
+        margin-left: -75px;
+        margin-top:-46px;
+        border-radius: 6px;
+        background: white;
+        color: $color_base;
+        height: 46px;
+        width: 150px;
+        font-weight: $bold;
+        font-size: 16px;
+    }
+
+}

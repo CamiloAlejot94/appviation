@@ -1,0 +1,101 @@
+page-comprehension-exercise {
+
+//===============================================================================================================================
+//Estilos para la descripción adicional sobre ejercicios de listening
+//===============================================================================================================================
+
+.pedl{
+	display: table;
+	width: 100%;
+
+	&-content{
+		display: table-cell;
+
+		//Affirm, Negative, Not stated
+		&-item, &-item-large{
+			color : $color_base2;
+			font-size: 16px;
+			margin-top : 19px;
+
+			>.item-listening{
+				height: 25px;
+				float : left;
+				margin-top:-4px;
+				margin-right: 5px;
+			}
+
+		}
+
+		&-item-large{
+			margin-top: 30px;
+		}
+
+		//Descripcion que acompaña a las opciones del listening
+		&-des{
+			font-size: 12.8px;
+			margin-top : 20px; //Margen para que el texto quede alineado con el otro
+			color : $color_txt2;
+		}
+		&:last-child{
+			width: 60%;
+		}
+	}
+}
+
+//Objetos internos del cuadrado en degrade que muestra las practicas
+//Descripción dentro de la figura (0 de 5)
+.figure-range{
+	position: absolute;
+	font-size: 0.1em;
+	margin-top: 35px;
+	font-size: 1em;
+	color: #FFF;
+	-webkit-transition: 1s;
+	transition: 1s;
+	left:63px;
+	font-size: 16px;
+}
+
+//Clase propia del objeto ion slide
+#sliderComprehension > .swiper-slide-prev, #sliderComprehension > .swiper-slide-next {
+	.practice-exercise-figure{
+		width: 150px;
+		height: 150px;
+		font-size: 26px;
+	}
+
+	.figure-range{
+		opacity: 0;
+	}
+}
+
+//Contenedor de las firugas (prácticas) Vista de los slides asomandose en los laterales kjsdh
+.content-figures{
+	padding: 0;
+	margin : 0 !important;
+	height: 200px;
+	margin-bottom : 30px !important; //Da un espacio para que las figuras de las prácticas no queden tan pegadas a la parte inferior de la pantalla
+}
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN MEDIA ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+    
+@media screen and (min-height: 638px)  {
+
+.content-figures > .swiper-slide-prev{
+	>.slide-zoom{
+		margin-right:-80%;
+	}
+}
+
+.content-figures >.swiper-slide-next{
+	>.slide-zoom{
+		margin-left:-80%;
+	}
+	//width: 60% !important;
+}
+
+} //Termina MediaQuery para pantalla media
+
+}

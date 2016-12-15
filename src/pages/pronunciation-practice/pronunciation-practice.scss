@@ -1,0 +1,205 @@
+page-pronunciation-practice {
+
+.pronunciationPractice{
+
+    &-description{
+        position : relative;
+        top : 0;
+        left:0;
+        margin-top : -20px;
+        padding-top : 20px;
+        width : 100%; 
+        padding-bottom : 20px;
+        background-color: #FFF;
+        box-shadow: 3px 0 5px #333;
+
+        //Botón para cerrar el texto descriptivo de la practica
+        &Close{
+            position : absolute;
+            z-index: 2;
+            top : 25px;
+            right : 5px;
+            width: 30px;
+            height: 30px;
+            background-image: url(../assets/img/close.svg);
+            border-radius: 100%;
+            text-align: center;
+        }
+
+        &Text {
+            width : 90%;
+            margin : auto;
+            margin-top : 20px;
+            color : $color_txt;
+            font-size: $p_size;
+        }
+    }
+
+    &-card {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 278px;
+        margin-top: 30px;
+        margin-left: -139px;
+        height: 90px;
+        border-radius: 10px;
+    }
+
+    &-send{
+        top:100%;
+        margin-top : -47px;
+    }
+
+}
+
+//PRIMER ESTILO DE PARA PRONUNCIATION PRACTICE
+.pronunciationPractice-1{
+
+    &-title{
+        color : #FFF;
+        text-align: center;
+        font-size: $h1_size;
+    }
+
+    &-description{
+        width: 90%;
+        color : #FFF;
+        font-size: $p_size;
+        margin : auto;
+    }
+
+    &-card{
+        border: 1px solid #FFF;
+
+        &Icons{
+            position: absolute;
+            width: 30px;
+            margin-top: 6.5px;
+            margin-left:20%;
+        }
+
+        &Title{
+            position: absolute;
+            color: #FFF;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            margin-top: 5px;
+        }
+
+        &Text{
+            width: 100%;
+            position: relative;
+            top: 44px;
+            height: 45px;
+            border : none;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            color: $color_txt;
+        }
+    }
+
+}
+
+//PRIMER ESTILO DE PARA PRONUNCIATION PRACTICE
+.pronunciationPractice-2{
+
+    &-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+    }
+
+    &-cardIcons{
+        margin-top : 2px;
+        width: 40px;
+        margin-right: 10px
+    }
+
+    &-cardTitle{     
+        margin: 0;  
+        text-align: center;
+    }
+
+    &-description{
+        width: 100%;
+        text-align: center;
+        color : #FFF;
+        font-size: 16px;
+    }
+
+    &-complete{
+        border-bottom: 1px solid $color_txt2;
+        color : $color_txt2;
+        width: 70px;
+        margin: 0;
+        margin-top: -4px;
+        font-size: 25px;
+        height: 31px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    //Botones para escoger respuesta
+    &-options{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &Button{
+            margin: 5px 1.5%;
+            width: 30%;
+            background: #FFF;
+            color : $color_base;
+            font-weight: $bold;
+            font-size: $p_size + 0.2em;
+
+            &:active{
+                border:1px solid #FFF; 
+                background: transparent;
+                color:#FFF;
+            }
+        }
+    }
+
+}
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN MEDIA ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+    
+@media screen and (min-width: 350px)  {
+
+.pronunciationPractice{
+
+    &-card{
+        width: 290px;
+        margin-left: -145px;
+    }
+
+}
+
+} //Termina MediaQuery para pantalla media
+
+//=====================================================================================
+//>>>>>>>>>>>>>>>>>>>>>>>>>>EQUIPOS CON RESOLUCIÓN ALTA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//=====================================================================================
+
+@media screen and (min-width: 400px)  {
+
+.pronunciationPractice{
+
+    &-card{
+        width: 320px;
+        margin-left: -160px;
+    }
+
+}
+
+} //Termina MediaQuery para pantalla alta
+
+}
