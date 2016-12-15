@@ -1061,42 +1061,52 @@
 
   "fluencyExercise" : {
     "0" : {
+      "id" : "1",
       "title" : "What is fluency?",
       "description" : "Fluency is the ability to speak easily, reasonably quickly, and without a lot of unnecessary stops and pauses."
     },
     "1" : {
+      "id" : "2",
       "title" : "Dramatic Performance",
       "description" : "This fluency exercise is about role playing one of parts in a conversation. By understanding the context of the situation you determine how that person is feeling at the moment of speaking and you project those emotion during your role-play."
     },
     "2" : {
+      "id" : "3",
       "title" : "Word by Word",
       "description" : "Word by word is an exercise that will help you focus on the progressive construction of your speech and gain speed by adding an extra word to the same sentence in every repetition. You will also be practicing your pronunciation of isolated and linked words."
     },
     "3" : {
+      "id" : "4",
       "title" : "Reading a text from top to bottom",
       "description" : "By reading a text accurately, quickly, and with expression you can develop fluency in the target language (English, in this case). Fluency provides a bridge between word recognition and comprehension. If you are fluent in English you recognize words automatically, meaning that you do not sacrifice comprehension to word decoding. Through this exercise you can develop your ability to express in a natural way, effortlessly and with expression."
     },
     "4" : {
+      "id" : "5",
       "title" : "Chunks",
       "description" : "Knowing what a word means is useful and important, but knowing how to use it in context is vital. Words are not to be used in isolation (most of the times) but as part of an expression or a fixed set of words. Being able to call on these 'chunks' of vocabulary will help you improve English fluency skills. "
     },
     "5" : {
+      "id" : "6",
       "title" : "Shadowing",
       "description" : "In this exercise we will practice with a technique called shadowing which is a good way to work on your pronunciation, rhythm and intonation. In shadowing you practice repeating after the speaker as soon as possible. Don’t wait and listen to the whole sentence and then repeat. You want to repeat as soon as possible almost at the same time as the speaker. "
     },
     "6" : {
+      "id" : "7",
       "title" : "Fillers",
       "description" : "When speaking continuously it is common to hesitate in the middle and search for words to add to our speech. This is when fillers are used in our conversations. Fillers buy you time as you think of the next word to say. There exist several words or expressions acting as fillers, some of them have meaning, some others don’t."
     },
     "7" : {
+      "id" : "8",
       "title" : "Discourse markers",
       "description" : "Discourse markers are responsible for the organization of the information in a conversation or text. They determine openings, closings, topic change, and in general everything that involves organizing the information in a conversation or text. They can also express the person’s attitude or feelings at the time the communication happens."
     },
     "8" : {
+      "id" : "9",
       "title" : "Connectors",
       "description" : "A connector is a word or expression that can be used to establish different types of relationships between words or sentences. Their basic function is to help us connect ideas so that our speech is more organized, logical and understandable."
     },
     "9" : {
+      "id" : "10",
       "title" : "Fluency Challenge",
       "description" : "In this exercise you will be presented with some fluency challenges for you to test the way you are applying intonation, rhythm, stress and of course how fluent you can sound when reading or speaking in English."
     }
@@ -1105,42 +1115,52 @@
 
   "interactionExercise" : {
     "0" : {
+      "id" : "1",
       "title" : "How to ASK FOR information?",
       "description" : "Asking for information in English is a tool you need when taking your Aviation English exam. Here you have some expressions that are going to help you ask for information in a easy and natural way so that the person who is interacting with you, can feel that you are comfortable in the conversation and also you can show interest with no hesitation, Since starting a conversation with direct questions might be rude, you can remember short expressions to ask for simple questions instead."
     },
     "1" : {
+      "id" : "2",      
       "title" : "How to confirm information?",
       "description" : "when you are in a conversation, you are naturally going to express a position and opinion on the topic that is being discussed; therefore just like you show yourself spontaneous with your mother tongue, you need to also know how to interact when using English. Now, how can you do it? Start putting into practice these expressions to confirm or clarify information:"
     },
     "2" : {
+      "id" : "3",      
       "title" : "How to clarify information?",
       "description" : "Clarifying information or confirming what the other person said or told you can be performed by adding these expressions to your lexical so that the person you are interacting with can feel you are following the idea and you are not able to go on the way without being completely sure about the topic."
     },
     "3" : {
+      "id" : "4",
       "title" : "How to give suggestions?",
       "description" : "For the TEA exam you have to know how to give suggestions to the pilot/ATC/ crew, etc. and for the EALTS exam, you will be constantly asked to suggest ideas when interacting with the other candidate, thus here you have some common phrases people may use to go according to their intentions."
     },
     "4" : {
+      "id" : "5",
       "title" : "How to express your opinion",
       "description" : "The moment you express your opinion, there may be a lot of common mistakes Spanish speakers make, hence you need to prevent those errors by expanding your vocabulary and including new expressions when saying: “In my opinion”or “I think”. In the following chart you will find a short list of words that you can start mixing in order to avoid repetition."
     },
     "5" : {
+      "id" : "6",
       "title" : "Do you agree?",
       "description" : "How often do you hear people saying and repeating! Yes, I agree with you”when having a conversation? That’s a very common mistake that evidences the lack of vocabulary people (candidates) have. Hence, let’s start speaking better; here you have the different ways to express the same feeling."
     },
     "6" : {
+      "id" : "7",
       "title" : "What to do when people don’t understand you?",
       "description" : "Being polite when someone does not understand you is essential in order to keep a nice interaction and make yourself comfortable, so here you have some different ways to retell your point of view."
     },
     "7" : {
+      "id" : "8",
       "title" : "Tower, say again!",
       "description" : "The expression “say again” is part of the phraseology you have to use but when having a common conversation, is that the only option you have to ask for repetition? You know there are several ways to ask for clarification."
     },
     "8" : {
+      "id" : "9",
       "title" : "Idiomatic expressions are extremely noteworthy",
       "description" : "If you want to sound like a native the use of idiomatic expressions has to be part of your English process. And this is because when interacting with other people, you need to demonstrate how close you are to the English/American culture so that people can feel your level of interaction and comfort when speaking English."
     },
     "9" : {
+      "id" : "10",
       "title" : "What about your body language?",
       "description" : "Here you have different tips to take into account when interacting with other people and the ones that will help you get points in your Aviation English exam. Keep in mind that we are humans and having a clean behavior will demonstrate confidence and reliability."
     }

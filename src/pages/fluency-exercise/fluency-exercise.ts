@@ -44,6 +44,7 @@ export class FluencyExercise implements OnInit{
 ngOnInit(){
     firebase.database().ref("fluencyExercise").once("value", data=>{
     let firebaseData = data.val()
+    console.log(firebaseData)
     this.PageTitle = firebaseData[this.item-1]['title']
     this.description = firebaseData [this.item -1]['description']
   })
