@@ -19,6 +19,7 @@ export class Exercises implements OnInit {
   page : any
   title : any
   exercises : any
+  exerciseNum = []
 
   constructor(public navCtrl: NavController, navParams: NavParams) {
 
@@ -73,6 +74,9 @@ export class Exercises implements OnInit {
   ngOnInit(){
     firebase.database().ref(this.page+"Exercise").once("value", data => {
       this.exercises = data.val()
+      for (let i = 0; i< this.exercises.length; i++){
+        this.exerciseNum.push(i)
+      }
     })
   }
 

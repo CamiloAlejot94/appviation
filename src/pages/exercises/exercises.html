@@ -15,9 +15,9 @@
   <div class="exercises_item"></div>
 
   <ul class="exercises_listPractice">
-    <li *ngFor="let exercise of exercises" class="exercises_listPracticeItem" (click)="goToExercise(page, exercise.ex)" ion-button clear>
+    <li *ngFor="let exercise of exercises" class="exercises_listPracticeItem" (click)="goToExercise(page, exercise.id)" ion-button clear>
       <div class="exercises_listPracticeItemText">
-        Exercise
+        Exercise {{exercise.id}}
         <span class="exercises_listPracticeItemSubtitle">{{exercise.title | slice:0:27}}</span>
         <div class="progressBar">
           <div class="active"></div>
