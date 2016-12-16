@@ -1,3 +1,39 @@
 page-interaction-exercise {
 
+.ex1{
+    padding-bottom:20px;
+}
+
+.shadowText{
+    background-color:#EEE;
+    padding : 5px 0;
+    margin : 20px 0;
+
+}
+
+.list{
+    .item{
+        font-size: 16px;
+        margin:10px 0;
+        color:#222;
+    }
+}
+
+// SLIDE DEL EJERCICIO 5
+.content-figures{
+    height: 213px;
+
+    .practice-exercise-figure{
+        width: 250px;
+        background: white;
+        margin-left:-125px;
+
+        p{
+            color: #111;
+            line-height: 42px;
+            font-weight: $bold;
+        }
+    }
+}
+
 }

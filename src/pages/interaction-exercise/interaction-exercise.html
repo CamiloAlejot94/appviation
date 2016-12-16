@@ -19,4 +19,148 @@
     {{description}}
   </P>
 
+  <!--
+    CONTENIDO PARA LA PRIMERA PRÁCTICA
+  -->
+  <div class="ex1" *ngIf="ex1">
+    <div class="shadowText">
+        <ul class="list">
+          <li class="item">Could you tell me...?</li>
+          <li class="item">I’d like to know...</li>
+          <li class="item">Do you know...?</li>
+          <li class="item">Have you got any idea..?</li>
+          <li class="item">Could anyone tell me..?</li>
+          <li class="item">I wonder if you could tell me...</li>
+        </ul>
+    </div>
+
+    <P class="wsDescription-ex">
+      Once you use these sentences before your question, take into account the importance of changing the word order of the information that is next, for instance: 
+      Could you tell me what is the alternate airport? : That is wrong....You’d better say: Could you tell me what the alternate airport is? : Then, the person you 
+      are interacting with is going to easily understand your intention and he or she is going to answer you faster and clear.
+    </P>
+  </div>
+
+
+
+  <!--
+    CONTENIDO PARA LA SEGUNDA PRÁCTICA
+  -->
+  <div class="ex2" *ngIf="ex2">
+    <div class="shadowText">
+        <ul class="list">
+          <li class="item">Can you rephrase what you said?</li>
+          <li class="item">So, you mean...</li>
+          <li class="item">Let me see if I’ve understood you correctly. You...</li>
+          <li class="item">Could you say that again?</li>
+        </ul>
+    </div>
+  </div>
+
+
+  <!--
+    CONTENIDO PARA LA TERCERA PRÁCTICA
+  -->
+  <div class="ex2" *ngIf="ex3">
+    <div class="shadowText">
+        <ul class="list">
+          <li class="item">Going back to what you just said about</li>
+          <li class="item">Could you clarify what you mean?</li>
+          <li class="item">Correct me if I’m wrong</li>
+          <li class="item">It’s not exactly what I meant</li>
+          <li class="item">Does that make everything clear?</li>
+          <li class="item">Could you go over that again?</li>
+          <li class="item">I must have misunderstood what you said</li>
+          <li class="item">No, I meant</li>
+          <li class="item">What exactly do you mean by..?</li>
+          <li class="item">In a nutshell...</li>
+        </ul>
+    </div>
+  </div>
+
+
+  <!--
+    CONTENIDO PARA LA CUARTA PRÁCTICA
+  -->
+  <div class="ex3" *ngIf="ex4">
+    <div class="shadowText">
+        <ul class="list">
+          <li class="item">Why don’t we...?</li>
+          <li class="item">How about...?</li>
+          <li class="item">How do you feel about..?</li>
+          <li class="item">Fancy... (ing)...?</li>
+          <li class="item">I suggest you (take)</li>
+          <li class="item">I recommend you</li>
+          <li class="item">It’s high time you (+ simple past)</li>
+          <li class="item">You should think twice before...</li>
+          <li class="item">Have you considered (ing)...</li>
+          <li class="item">It may be a good idea</li>
+          <li class="item">You’d better</li>
+          <li class="item">You ought to</li>
+        </ul>
+    </div>
+  </div>
+
+
+  <!--
+    CONTENIDO PARA LA QUINTA PRÁCTICA
+  -->
+  <div class="ex3" *ngIf="ex5">
+    <div class="shadowText">
+      <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions">
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              In my opinion...<br>
+              In my eyes,
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              To my mind, ...<br>
+              As far as I am concerned <br>
+              Speaking personally, ...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              From my point of view, ...<br>
+              As for me / As to me, ...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              My view / opinion / belief /<br>
+              As for me / As to me, ...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              My view / opinion / belief /<br>
+              impression / conviction is that.<br>
+              In hold the view that...
+            </p>
+          </button>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+
 </ion-content>
+
+<ion-footer>
+    <button class="ws-full" (click)="goToPactices()">Go to practice</button>
+</ion-footer>
