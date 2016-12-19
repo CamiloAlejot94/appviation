@@ -1,0 +1,95 @@
+<ion-header>
+
+  <ion-navbar class="toolbar-ws">
+    <ion-title>Exercise {{item}} <br><span class="Subtitle"> Practice {{numEx}}</span></ion-title>    
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="ws-bg">
+  <!--
+    PESTAÑA DE DIV DESPLEGABLE
+  -->
+  <div class="flange" (click)="eeInfo=!eeInfo">
+    Information
+  </div>
+  <!--
+    INFORMACIÓN DESPLEGABLE SEGÚN LA CATEGORÍA.
+  -->
+  <div class="eeInfo"  [class.eeInfo-animation]="eeInfo">
+    <p class="cueCard" *ngIf="cueCard" (click)="showCueCard()">CUE CARD</p>
+    <!--
+      ICONO PARA CERRAR DIV BLANCO
+    -->
+    <button class="closeInfo" (click)="eeInfo=!eeInfo">
+      <ion-icon ios="md-close" md="md-close"></ion-icon>
+    </button>
+    <!--
+      CONTENIDO DEL DIV BLANCO
+    -->
+    <P>
+      {{divWhiteDescription}}
+    </P>
+  </div>
+<div class="audioListening" *ngIf="audListening">
+    <button ion-button outline  round (click)="playAudio()">
+      <ion-icon ios="ios-play"  *ngIf ="playBtn" md="ios-play"></ion-icon> 
+      <ion-icon ios="ios-pause" *ngIf ="pauseBtn" md="ios-pause"></ion-icon> 
+      LISTEN {{ios}}
+    </button>
+</div>
+      <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions" *ngIf= "sldcards">
+      
+          <ion-slide class="practice-slide">              
+            <div class="practice-exercise-figure">
+              <p class="cueHead">Title</p>
+                <p class="cueTxt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, provident saepe nobis consectetur animi, maxime vel tenetur debitis modi alias repellat reiciendis ipsa commodi laudantium vero culpa delectus, doloremque vitae!</p>
+              <button class="btnMic">
+                <ion-icon ios="ios-mic" md="ios-mic"></ion-icon>
+              </button>
+            </div>
+          </ion-slide>
+    </ion-slides>
+
+<div class="list_audio" *ngIf="listAudio">
+    <div class="audio" >
+      <p class="audio_name">Audio 1</p> <br>
+      <p class="audio_description">Initial test - Back to back</p>
+
+      <img class="audio_gif" src="http://i339.photobucket.com/albums/n442/mcrmy_derick/equalizer.gif" alt="">
+      <!--
+      BOTONES DE PLAY - PAUSE
+      -->
+      <button class="playBtn" *ngIf="playBtn" (click)="playAudio('https://firebasestorage.googleapis.com/v0/b/wordsinc-da3e2.appspot.com/o/initialTest%2FbackToBack%2F1.mp3?alt=media&token=3c1298b4-27d3-4b92-a109-2832a83ab47a', 'Audio 1')">
+        <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+      </button>
+      <button class="playBtn" *ngIf="pauseBtn" (click)="pauseAudio()">
+        <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+      </button>
+    </div>
+
+  </div> 
+
+</ion-content>
+
+<ion-footer>
+    
+  <!--Botón de ayuda-->
+  <ion-icon class="menu_rec_help"  ios="md-help-circle" md="md-help-circle" (click)="helpMenu()"></ion-icon>
+  <!--Boton cuadrado "Done"-->
+  <button class="Btns" *ngIf="btnDone">Done</button>
+  <!--boton mic-->
+  <button class="rec-btn" *ngIf="micContent">
+      <ion-icon ios="ios-mic" md="ios-mic"></ion-icon>
+  </button>
+  <!--Boton cuadrado "Send"-->
+  <button class="Btns" *ngIf="btnSend">Send</button>
+
+  </ion-footer>
