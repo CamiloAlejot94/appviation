@@ -26,8 +26,6 @@ export class Exercises implements OnInit {
     //Recibe las variables que se envian de ICAO
     this.page = navParams.get('page');
     this.title = this.page
-
-
   }
 
   //Este metodo envia al usuario a la pagina de practicas de la opcion que haya seleccionado en ICAO

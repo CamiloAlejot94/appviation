@@ -12,7 +12,20 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
+
+  <!--
+    CARGADOR
+  -->
+  <div class="loader" *ngIf="!contentLoad">
+    <ion-spinner class="ws-loader blue"></ion-spinner>
+  </div>
+
+
+  <!--
+    CONTENIDO CARGADO
+  -->
+  <div class="contentLoad" *ngIf="contentLoad">
   <h1 class="wsTitle-ex">{{pageTitle}}</h1>
   
   <P class="wsDescription-ex">
@@ -111,7 +124,7 @@
         <ion-slide class="practice-slide">
           <button class="practice-exercise-figure" ion-button>
             <p>
-              In my opinion...<br>
+              In my opinion, ...<br>
               In my eyes,
             </p>
           </button>
@@ -140,7 +153,18 @@
           <button class="practice-exercise-figure" ion-button>
             <p>
               My view / opinion / belief /<br>
-              As for me / As to me, ...
+              impression / conviction is that.<br>
+              In hold the view that...
+            </p>
+          </button>
+        </ion-slide>
+        
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I would say that... <br>
+              It seems to me that... <br>
+              I am of the opinion that...
             </p>
           </button>
         </ion-slide>
@@ -148,15 +172,76 @@
         <ion-slide class="practice-slide">
           <button class="practice-exercise-figure" ion-button>
             <p>
-              My view / opinion / belief /<br>
-              impression / conviction is that.<br>
-              In hold the view that...
+              My impression is that... <br>
+              I am under the impression that<br>
+              ... It is my impression that...
             </p>
           </button>
         </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I have the feeling that...<br>
+              My own feeling on the subject<br>
+              is that...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I have no doubt that...<br>
+              I am sure / I am certain that...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I think / consider / find / feel /<br>
+              believe / suppose / presume /<br>
+              assume that...
+            </p>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I hold the opinion that...<br>
+              I dare say that...
+            </p>
+          </button>
+        </ion-slide>
+
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              I guess that <br>
+              I bet that ... <br>
+              I gather that...
+            </p>
+          </button>
+        </ion-slide>
+
+
+        <ion-slide class="practice-slide">
+          <button class="practice-exercise-figure" ion-button>
+            <p>
+              It goes without saying that...
+            </p>
+          </button>
+        </ion-slide>
+
       </ion-slides>
     </div>
   </div>
+
+  </div> <!--TERMINAL EL CONTENIDO CARGADO-->
 
 
 </ion-content>

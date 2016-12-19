@@ -19,6 +19,8 @@ export class InteractionExercise implements OnInit {
     spaceBetween : 200
   };
 
+  contentLoad = false
+
   title : any // Titulo del header
   exerciseNum : any
   pageTitle : any // Titulo del ejercicio
@@ -65,7 +67,7 @@ export class InteractionExercise implements OnInit {
       let firebaseData = data.val()
       this.pageTitle = firebaseData[this.exerciseNum-1]['title']
       this.description = firebaseData[this.exerciseNum-1]['description']
-    })
+    }).then(() => this.contentLoad=true)
   }
 
 }

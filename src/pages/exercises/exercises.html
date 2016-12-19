@@ -20,12 +20,11 @@
         Exercise {{exercise.id}}
         <span class="exercises_listPracticeItemSubtitle">{{exercise.title | slice:0:27}}</span>
         <div class="progressBar">
-          <div class="active"></div>
+          <div class="active" [ngStyle]="{'width' : '50' + '%'}"></div>
         </div>
       </div>
     </li>
   </ul>
-<!--jsdyfg-->
 
 </ion-content>
 
