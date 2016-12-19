@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar class="toolbar-ws">
-    <ion-title>{{title}}</ion-title>
+    <ion-title>Exercise {{title}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only class="toolbarUser">
         <ion-icon class="user"></ion-icon>
@@ -28,8 +28,19 @@
       </ul>
     </div>
 
+  <div class="shadowText">
+        <ul class="list">
+          <li class="item">Could you tell me...?</li>
+          <li class="item">I’d like to know...</li>
+          <li class="item">Do you know...?</li>
+          <li class="item">Have you got any idea..?</li>
+          <li class="item">Could anyone tell me..?</li>
+          <li class="item">I wonder if you could tell me...</li>
+        </ul>
+    </div>
+
 </ion-content>
 
 <ion-footer>
-    <button class="ws-full" (click)="goToPactices(title,PageTitle,item)">Go to practice</button>
+    <button class="ws-full" (click)="goToPactices(title,PageTitle,7)">Go to practice</button>
 </ion-footer>

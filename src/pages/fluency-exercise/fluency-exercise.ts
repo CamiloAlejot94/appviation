@@ -18,7 +18,7 @@ export class FluencyExercise implements OnInit{
   };
 
 
-  title:string
+  title:any
   item:number
   ex1=false
   PageTitle: any
@@ -33,11 +33,10 @@ export class FluencyExercise implements OnInit{
   constructor(public navCtrl: NavController, navParams: NavParams) 
   {
       this.item = navParams.get('exercise');
-      this.title = "Exercise " + this.item;
+      this.title =  this.item;
       if(this.item==1){
         this.ex1=true
       }
-      
       
   }
 
@@ -45,6 +44,7 @@ ngOnInit(){
     firebase.database().ref("fluencyExercise").once("value", data=>{
     let firebaseData = data.val()
     console.log(firebaseData)
+    
     this.PageTitle = firebaseData[this.item-1]['title']
     this.description = firebaseData [this.item -1]['description']
   })
@@ -54,8 +54,10 @@ goToPactices(ex, btn, prac){
   this.navCtrl.push(ShowPracticesPage, {
     numEx : ex,
     buttonTxt : btn,
-    practices : prac
-  })
+    practices : prac}
+    
+  
+  )
 }
 
 }

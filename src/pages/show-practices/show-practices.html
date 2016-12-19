@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar class="toolbar-ws">
-    <ion-title>{{numEx}}</ion-title>
+    <ion-title>Exercise {{numEx}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only class="toolbarUser">
         <ion-icon class="user"></ion-icon>
@@ -12,7 +12,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
   <!--
     Spinner para cargar el contenido
@@ -27,10 +27,8 @@
   <button class="btnSlideOut" ion-button outline (click)="backTo()">{{buttonTxt}}</button>
   <!--Slides inteligentes-->
   <ion-slides class="slideLarge" [options]="pronunciationSlideOptions">
-      <ion-slide class="slideLarge-slide" *ngFor="let practice of practices">
-      
-        <button ion-button class="slideLarge-slide-button">{{practice.name}}</button>
-
+      <ion-slide class="slideLarge-slide" *ngFor="let A of array">      
+        <button ion-button class="slideLarge-slide-button "(click)="goToPractice(numEx,item,A.name)">Practice {{A.name}}</button>        
     </ion-slide>      
   </ion-slides>
   

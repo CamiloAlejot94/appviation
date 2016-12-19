@@ -21,6 +21,7 @@ import { ModalExerciseListen } from '../pages/pronunciation-exercise-listen/pron
 import { ComprehensionExercise } from '../pages/comprehension-exercise/comprehension-exercise'
 import { ComprehensionPractice } from '../pages/comprehension-practice/comprehension-practice'
 import { FluencyExercise } from '../pages/fluency-exercise/fluency-exercise'
+import { FluencyPractice } from '../pages/fluency-practice/fluency-practice'
 import { ShowPracticesPage } from '../pages/show-practices/show-practices'
 import { InteractionExercise } from '../pages/interaction-exercise/interaction-exercise'
 
@@ -48,6 +49,7 @@ import { InteractionExercise } from '../pages/interaction-exercise/interaction-e
     ComprehensionExercise,
     ComprehensionPractice,
     FluencyExercise,
+    FluencyPractice,
     ShowPracticesPage,
     InteractionExercise
     
@@ -78,6 +80,7 @@ import { InteractionExercise } from '../pages/interaction-exercise/interaction-e
     ComprehensionExercise,
     ComprehensionPractice  ,
     FluencyExercise,
+    FluencyPractice,
     ShowPracticesPage,
     InteractionExercise
   ],
