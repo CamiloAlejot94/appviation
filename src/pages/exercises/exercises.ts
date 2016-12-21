@@ -5,6 +5,7 @@ import { PronunciationExerciseListen } from '../pronunciation-exercise-listen/pr
 import { ComprehensionExercise } from '../comprehension-exercise/comprehension-exercise'
 import { FluencyExercise } from '../fluency-exercise/fluency-exercise'
 import { InteractionExercise } from '../interaction-exercise/interaction-exercise'
+import { StructureExercise } from '../structure-exercise/structure-exercise'
 
 declare var firebase : any
 
@@ -39,6 +40,9 @@ export class Exercises implements OnInit {
       } else if (page == 'interaction'){
         this.goToInteraction(ex)
       }
+        else if (page='structure'){
+        this.goToStructure(ex)
+      }
   }
 
   //Abre la página que contiene los ejercicios de PronunciationExerciseListen
@@ -65,6 +69,12 @@ export class Exercises implements OnInit {
   //Abre la página que contiene los ejercicios de InteractionExercise
   goToInteraction(ex){
     this.navCtrl.push(InteractionExercise,{
+      exercise : ex
+    });
+  }
+
+  goToStructure(ex){
+    this.navCtrl.push(StructureExercise,{
       exercise : ex
     });
   }

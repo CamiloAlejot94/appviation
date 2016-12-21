@@ -28,6 +28,8 @@ import { StructureExercise } from '../pages/structure-exercise/structure-exercis
 import { StructurePractice } from '../pages/structure-practice/structure-practice'
 import { VocabularyExercise } from '../pages/vocabulary-exercise/vocabulary-exercise'
 import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-practice'
+// import { ModalWdW } from '../pages/fluency-practice/fluency-practice'
+
 
 
 
@@ -60,7 +62,8 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
     VocabularyExercise,
     VocabularyPractice,
     StructureExercise,
-    StructurePractice
+    StructurePractice,
+    // ModalWdW
     
   ],
   imports: [
@@ -95,7 +98,8 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
     VocabularyExercise,
     VocabularyPractice,
     StructureExercise,
-    StructurePractice
+    StructurePractice,
+    // ModalWdW
   ],
   providers: []
 })

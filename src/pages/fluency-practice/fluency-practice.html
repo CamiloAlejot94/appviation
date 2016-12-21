@@ -62,8 +62,6 @@
     <div class="audio" >
       <p class="audio_name">Audio 1</p> <br>
       <p class="audio_description">Initial test - Back to back</p>
-
-      <img class="audio_gif" src="http://i339.photobucket.com/albums/n442/mcrmy_derick/equalizer.gif" alt="">
       <!--
       BOTONES DE PLAY - PAUSE
       -->
@@ -76,13 +74,39 @@
     </div>
 
   </div> 
+  
+<ul *ngIf="showList">
+  <li style="list-style:none" class="ListAudio" *ngFor= "let A of array">
+    <div class="ListAudio" >
+      <p class="audioList_name">Information {{A.name}}</p> <br>
+      <button class="playBtn" *ngIf="playBtn" (click)="playAudio('https://firebasestorage.googleapis.com/v0/b/wordsinc-da3e2.appspot.com/o/initialTest%2FbackToBack%2F1.mp3?alt=media&token=3c1298b4-27d3-4b92-a109-2832a83ab47a', 'Audio 1')">
+        <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+      </button>
+      <button class="playBtn" *ngIf="pauseBtn" (click)="pauseAudio()">
+        <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+      </button>
+      <button class="listMicIco" (click)="shwPlay()">  
+        <ion-icon  ios="ios-mic" md="ios-mic"></ion-icon>
+      </button>
+      <button class="listPlay" *ngIf="showPlay" (click)="shwStop()">  
+        <ion-icon  ios="ios-play" md="ios-play"></ion-icon>
+      </button>
+      <button class="listStop" *ngIf="showStop" (click)="shwPlay()">
+        <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+      </button>
+    </div>
+
+  </li>
+</ul>
+  <!--Ventana modal-->
+
 
 </ion-content>
 
 <ion-footer>
     
   <!--Botón de ayuda-->
-  <ion-icon class="menu_rec_help"  ios="md-help-circle" md="md-help-circle" (click)="helpMenu()"></ion-icon>
+  <ion-icon class="menu_rec_help"  ios="md-help-circle" md="md-help-circle" (click)="helpMenu()" (click)="showCueCard"></ion-icon>
   <!--Boton cuadrado "Done"-->
   <button class="Btns" *ngIf="btnDone">Done</button>
   <!--boton mic-->

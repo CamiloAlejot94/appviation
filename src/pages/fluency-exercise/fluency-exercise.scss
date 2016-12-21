@@ -61,7 +61,31 @@ page-fluency-exercise {
 .shadowText{
     background-color:#EEE;
     padding : 5px 0;
-    margin : 20px 0;
+    margin : 0px 0;
 
+}
+.audioListening{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+    z-index: -1;
+
+    button {
+        border: 1px solid $color_base;
+        color: $color_base;
+        font-size: 18px;
+        height: 38px;
+        width: 140px;
+        margin: 0;
+        padding: 0;
+        font-weight: $bold;
+
+    ion-icon{
+        margin-right: 10px;
+    }
+    }
 }
 }

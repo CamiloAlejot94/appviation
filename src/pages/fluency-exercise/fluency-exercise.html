@@ -1,9 +1,3 @@
-<!--
-  Generated template for the FluencyExercise page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar class="toolbar-ws">
     <ion-title>Exercise {{title}}</ion-title>
@@ -27,8 +21,14 @@
         <li *ngFor="let item of itemlist" class="listItem">{{item}}</li>
       </ul>
     </div>
-
-  <div class="shadowText">
+<div class="audioListening" *ngIf="audListening">
+      <button ion-button outline  round (click)="playAudio()">
+      <ion-icon ios="ios-play"  *ngIf ="playBtn" md="ios-play"></ion-icon> 
+      <ion-icon ios="ios-pause" *ngIf ="pauseBtn" md="ios-pause"></ion-icon> 
+      {{btnTxt}}
+    </button>
+</div>
+  <div class="shadowText" *ngIf="shdwTxt">
         <ul class="list">
           <li class="item">Could you tell me...?</li>
           <li class="item">I’d like to know...</li>

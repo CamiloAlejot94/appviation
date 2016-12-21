@@ -29,6 +29,11 @@ export class FluencyExercise implements OnInit{
   "The most important thing is to communicate what you want or need to say.",
   "Do your best to sound as natural as possible. "]
   practices: any
+  shdwTxt= false
+  playBtn= true
+  pauseBtn= false
+  btnTxt= "Listen"
+  audListening=false
   
   constructor(public navCtrl: NavController, navParams: NavParams) 
   {
@@ -37,7 +42,14 @@ export class FluencyExercise implements OnInit{
       if(this.item==1){
         this.ex1=true
       }
-      
+      if(this.item== 3 ||this.item== 5 ||this.item== 7 ||this.item== 8||this.item== 9)
+      {
+        this.shdwTxt=true
+      }
+      if(this.item==3 || this.item==5){
+        this.audListening=true
+      }
+
   }
 
 ngOnInit(){
@@ -59,6 +71,17 @@ goToPactices(ex, btn, prac){
   
   )
 }
-
+ playAudio(){
+  if (this.playBtn==true){
+    this.playBtn=false
+    this.pauseBtn=true
+    this.btnTxt="Pause"
+  }
+  else{
+    this.playBtn=true
+    this.pauseBtn=false
+    this.btnTxt="Listen"
+  }
+  }
+PauseAudio(){}
 }
-
