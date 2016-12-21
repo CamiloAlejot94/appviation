@@ -24,6 +24,11 @@ import { FluencyExercise } from '../pages/fluency-exercise/fluency-exercise'
 import { FluencyPractice } from '../pages/fluency-practice/fluency-practice'
 import { ShowPracticesPage } from '../pages/show-practices/show-practices'
 import { InteractionExercise } from '../pages/interaction-exercise/interaction-exercise'
+import { StructureExercise } from '../pages/structure-exercise/structure-exercise'
+import { StructurePractice } from '../pages/structure-practice/structure-practice'
+import { VocabularyExercise } from '../pages/vocabulary-exercise/vocabulary-exercise'
+import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-practice'
+
 
 
 @NgModule({
@@ -51,7 +56,11 @@ import { InteractionExercise } from '../pages/interaction-exercise/interaction-e
     FluencyExercise,
     FluencyPractice,
     ShowPracticesPage,
-    InteractionExercise
+    InteractionExercise,
+    VocabularyExercise,
+    VocabularyPractice,
+    StructureExercise,
+    StructurePractice
     
   ],
   imports: [
@@ -82,7 +91,11 @@ import { InteractionExercise } from '../pages/interaction-exercise/interaction-e
     FluencyExercise,
     FluencyPractice,
     ShowPracticesPage,
-    InteractionExercise
+    InteractionExercise,
+    VocabularyExercise,
+    VocabularyPractice,
+    StructureExercise,
+    StructurePractice
   ],
   providers: []
 })
