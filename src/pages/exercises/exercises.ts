@@ -6,6 +6,10 @@ import { ComprehensionExercise } from '../comprehension-exercise/comprehension-e
 import { FluencyExercise } from '../fluency-exercise/fluency-exercise'
 import { InteractionExercise } from '../interaction-exercise/interaction-exercise'
 import { StructureExercise } from '../structure-exercise/structure-exercise'
+import { VocabularyExercise } from '../vocabulary-exercise/vocabulary-exercise'
+import { QuickTestPage } from '../quick-test/quick-test';
+import { FinalTestPage } from '../final-test/final-test';
+import { UserProfilePage } from '../user-profile/user-profile';
 
 declare var firebase : any
 
@@ -16,72 +20,49 @@ declare var firebase : any
 
 export class Exercises implements OnInit {
 
+  // PANTALLAS PARA NAV PUSH
+  quickTest = QuickTestPage
+  finalTest = FinalTestPage
+  userProfile = UserProfilePage
 
-  page : any
-  title : any
+  pageName : any
   exercises : any
   exerciseNum = []
 
   constructor(public navCtrl: NavController, navParams: NavParams) {
-
     //Recibe las variables que se envian de ICAO
-    this.page = navParams.get('page');
-    this.title = this.page
+    this.pageName = navParams.get('page');
   }
 
-  //Este metodo envia al usuario a la pagina de practicas de la opcion que haya seleccionado en ICAO
-  goToExercise (page, ex){
-    console.log(page)
-    if(page == 'pronunciation'){
-      this.goToPronunciation(ex);
-    } else if (page == 'comprehension'){
-      this.goToComprehension(ex);
-    } else if (page == 'fluency'){
-        this.goToFluency(ex)
-      } else if (page == 'interaction'){
-        this.goToInteraction(ex)
-      }
-        else if (page='structure'){
-        this.goToStructure(ex)
-      }
-  }
-
-  //Abre la página que contiene los ejercicios de PronunciationExerciseListen
-  goToPronunciation(ex){
-    this.navCtrl.push(PronunciationExerciseListen, {
-      numExercise : ex
-    });
-  }
-
-  //Abre la página que contiene los ejercicios de ComprehensionExercise
-  goToComprehension(ex){
-    this.navCtrl.push(ComprehensionExercise,{
-      exercise : ex
-    });
-  }
-
-  //Abre la página que contiene los ejercicios de FluencyExercise
-  goToFluency(ex){
-    this.navCtrl.push(FluencyExercise,{
-      exercise : ex
-    });
-  }
-
-  //Abre la página que contiene los ejercicios de InteractionExercise
-  goToInteraction(ex){
-    this.navCtrl.push(InteractionExercise,{
-      exercise : ex
-    });
-  }
-
-  goToStructure(ex){
-    this.navCtrl.push(StructureExercise,{
-      exercise : ex
-    });
+  goToExercises(pageName, ex){
+    // Evalúa el nombre de la pantalla para asignarle el link a la variable linkExercise
+    if (pageName == 'pronunciation'){
+    } else if (pageName == 'comprehension'){    
+    } else if (pageName == 'fluency'){
+      this.navCtrl.push(FluencyExercise, {
+        pageName : pageName,
+        exerciseNumber : ex
+      })
+    } else if (pageName == 'interaction'){
+      this.navCtrl.push(InteractionExercise, {
+        pageName : pageName,
+        exerciseNumber : ex
+      })
+    } else if (pageName == 'vocabulary'){
+      this.navCtrl.push(VocabularyExercise, {
+        pageName : pageName,
+        exerciseNumber : ex
+      })    
+    } else if (pageName == 'structure'){  
+      this.navCtrl.push(StructureExercise, {
+        pageName : pageName,
+        exerciseNumber : ex
+      })  
+    }
   }
 
   ngOnInit(){
-    firebase.database().ref(this.page+"Exercise").once("value", data => {
+    firebase.database().ref(this.pageName+"Exercise").once("value", data => {
       this.exercises = data.val()
       for (let i = 0; i< this.exercises.length; i++){
         this.exerciseNum.push(i)

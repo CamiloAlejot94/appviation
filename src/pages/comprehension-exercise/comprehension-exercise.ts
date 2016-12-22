@@ -43,9 +43,6 @@ export class ComprehensionExercise implements OnInit {
     
   }
 
-  ionViewDidLoad() {
-  }
-
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     console.log("Current index is", currentIndex);
