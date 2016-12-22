@@ -1,3 +1,15 @@
 page-structure-exercise {
-
+.title {
+        color: $color_base;
+        text-align: center;
+        font-weight: $bold;
+        margin:1px;
+    }
+    
+.description {
+    color: $color_txt;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+    }
 }

@@ -1,24 +1,34 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { NavController, NavParams, Slide } from 'ionic-angular';
+declare var firebase
 
-/*
-  Generated class for the StructureExercise page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-structure-exercise',
   templateUrl: 'structure-exercise.html'
 })
 export class StructureExercise {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
-  }
+  title : any
+  item:number
+  PageTitle: any
+  description: any
+  constructor(public navCtrl: NavController, public navParams: NavParams) 
+  {
+    this.item=navParams.get('exercise');
+    this.title=this.item;
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StructureExercisePage');
   }
-
+  ngOnInit(){
+    firebase.database().ref("structureExercise").once("value", data=>{
+    let firebaseData = data.val()
+    console.log(firebaseData)
+    
+    this.PageTitle = firebaseData[this.item-1]['title']
+    this.description = firebaseData [this.item -1]['description']
+  })
 }
+}
+
