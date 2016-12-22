@@ -28,6 +28,9 @@ import { StructureExercise } from '../pages/structure-exercise/structure-exercis
 import { StructurePractice } from '../pages/structure-practice/structure-practice'
 import { VocabularyExercise } from '../pages/vocabulary-exercise/vocabulary-exercise'
 import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-practice'
+import { QuickTestPage } from '../pages/quick-test/quick-test'
+import { FinalTestPage } from '../pages/final-test/final-test'
+import { UserProfilePage } from '../pages/user-profile/user-profile'
 // import { ModalWdW } from '../pages/fluency-practice/fluency-practice'
 
 
@@ -63,6 +66,9 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
     VocabularyPractice,
     StructureExercise,
     StructurePractice,
+    QuickTestPage,
+    FinalTestPage,
+    UserProfilePage
     // ModalWdW
     
   ],
@@ -90,7 +96,7 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
     PronunciationExerciseListen,
     ModalExerciseListen,
     ComprehensionExercise,
-    ComprehensionPractice  ,
+    ComprehensionPractice,
     FluencyExercise,
     FluencyPractice,
     ShowPracticesPage,
@@ -99,6 +105,9 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
     VocabularyPractice,
     StructureExercise,
     StructurePractice,
+    QuickTestPage,
+    FinalTestPage,
+    UserProfilePage    
     // ModalWdW
   ],
   providers: []
