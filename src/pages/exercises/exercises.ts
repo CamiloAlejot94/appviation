@@ -31,6 +31,7 @@ export class Exercises implements OnInit {
 
   //Este metodo envia al usuario a la pagina de practicas de la opcion que haya seleccionado en ICAO
   goToExercise (page, ex){
+    console.log(page)
     if(page == 'pronunciation'){
       this.goToPronunciation(ex);
     } else if (page == 'comprehension'){

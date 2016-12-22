@@ -45,8 +45,10 @@ export class ShowPracticesPage {
     this.navCtrl.pop()
   }
   goToPractice(b,prac,numEx){
-    this.navCtrl.push(FluencyPractice,{item : b, prac : prac, numEx : numEx})
-    }
+    console.log(b + prac + numEx)
+    // this.navCtrl.push(FluencyPractice,{item : b, prac : prac, numEx : numEx})
+  }
+  
   arrayFor(){
   for(let i=0;i<this.item;i++){
     this.array.push({"name" : i+1})}
