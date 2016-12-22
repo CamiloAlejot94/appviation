@@ -1,6 +1,8 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
 import { ShowPracticesPage } from '../show-practices/show-practices';
+import { UserProfilePage } from '../user-profile/user-profile';
+
 declare var firebase 
 
 @Component({
@@ -16,7 +18,9 @@ export class FluencyExercise implements OnInit{
     centeredSlides: true,
     spaceBetween : 90
   };
-
+  
+  // PANTALLAS PARA NAV PUSH
+  userProfile = UserProfilePage
 
   title:any
   item:number
@@ -34,10 +38,11 @@ export class FluencyExercise implements OnInit{
   pauseBtn= false
   btnTxt= "Listen"
   audListening=false
+  practicesNumber : any // Captura de firebase la cantidad de practicas que tiene un ejercicio
   
   constructor(public navCtrl: NavController, navParams: NavParams) 
   {
-      this.item = navParams.get('exercise');
+      this.item = navParams.get('exerciseNumber');
       this.title =  this.item;
       if(this.item==1){
         this.ex1=true
@@ -56,9 +61,9 @@ ngOnInit(){
     firebase.database().ref("fluencyExercise").once("value", data=>{
     let firebaseData = data.val()
     console.log(firebaseData)
-    
     this.PageTitle = firebaseData[this.item-1]['title']
     this.description = firebaseData [this.item -1]['description']
+    this.practicesNumber = firebaseData [this.item -1]['practicesNumber']
   })
 }
 
