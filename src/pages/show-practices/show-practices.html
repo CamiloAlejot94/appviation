@@ -3,7 +3,7 @@
   <ion-navbar class="toolbar-ws">
     <ion-title>Exercise {{numEx}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only class="toolbarUser">
+      <button [navPush]="userProfile" ion-button icon-only class="toolbarUser">
         <ion-icon class="user"></ion-icon>
       </button>
     </ion-buttons>
@@ -24,9 +24,9 @@
   <div class="contentLoad" *ngIf="contentLoad">
 
   <!--Botón flotante superior para volver a mostrar el icao Alphabet-->
-  <button class="btnSlideOut" ion-button outline (click)="backTo()">{{buttonTxt}}</button>
+  <button class="btnSlideOut" ion-button outline (click)="backTo()">{{buttonTxt | slice:0:27}}<span *ngIf="buttonTxt.length > 27"> ...</span></button>
   <!--Slides inteligentes-->
-  <ion-slides class="slideLarge" [options]="pronunciationSlideOptions">
+  <ion-slides class="slideLarge" #sliderPractices [options]="mySlideOptions">
       <ion-slide class="slideLarge-slide" *ngFor="let A of array">      
         <button ion-button class="slideLarge-slide-button "(click)="goToPractice(numEx,item,A.name)">Practice {{A.name}}</button>        
     </ion-slide>      

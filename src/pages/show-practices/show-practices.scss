@@ -1,3 +1,47 @@
 page-show-practices {
 
+/*========================================================================================================================
+========================================SLIDE GRANDE =====================================================================
+========================================================================================================================*/
+//Botón superior que muestra el alphabet y numbers
+.btnSlideOut{
+    position:absolute;
+    top : 0;
+    width: 275px;
+    left : 48%;
+    margin-top: 30px;
+    margin-left : -130px;
+    border-color : $color_base;
+    color : $color_base;
+    font-size: 18px;
+    height: 40px;
+}
+
+//Slides de las practicas
+.slideLarge{
+
+    position: absolute;
+    height: 85%;
+    top: 45%;
+    left:0;
+    margin-top: -50%;
+
+    //Practica 1, 2, etc
+    &-slide{
+        //Botón para seleccionar la práctica
+        &-button{
+            position:absolute;
+            top : 10%;
+            left:50%;
+            width: 250px !important;
+            min-height: 350px;
+            margin-left:-125px;
+            background: linear-gradient(to bottom right, $color_base, $color_base2 170%);
+            border-radius: 10px;
+            font-size: $h1_size;
+        }
+    }
+
+}
+
 }

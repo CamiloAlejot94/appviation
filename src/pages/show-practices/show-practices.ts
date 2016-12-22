@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, NavParams } from 'ionic-angular';
 import { FluencyPractice } from '../fluency-practice/fluency-practice'
+import { UserProfilePage } from '../user-profile/user-profile';
 
 @Component({
   selector: 'page-show-practices',
@@ -8,14 +9,17 @@ import { FluencyPractice } from '../fluency-practice/fluency-practice'
 })
 export class ShowPracticesPage {
 
-  @ViewChild('sliderComprehension') slider: Slides;
+  @ViewChild('sliderPractices') slider: Slides;
 
   mySlideOptions = {
     slidesPerView: 2,
     centeredSlides: true,
-    spaceBetween : 90
+    spaceBetween : 200
   };
   
+  // PANTALLAS PARA NAV PUSH
+  userProfile = UserProfilePage
+
   contentLoad = true
   numEx: any
   buttonTxt: any
@@ -37,10 +41,7 @@ export class ShowPracticesPage {
       this.practices.push({"name" : "Practice " + i+1, "exercises" : "5"})
     }
   }
-
-  ionViewDidLoad() {
-    console.log('Hello ShowPracticesPage Page');
-  }
+  
   backTo(){
     this.navCtrl.pop()
   }
