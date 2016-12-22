@@ -2,36 +2,38 @@
   <ion-navbar class="toolbar-ws">
     <ion-title>Exercise {{title}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only class="toolbarUser">
+      <button [navPush]="userProfile" ion-button icon-only class="toolbarUser">
         <ion-icon class="user"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content >
-  <h1 class="title">{{PageTitle}}</h1>
+<ion-content>
+
+  <h1 class="wsTitle-ex">{{pageTitle}}</h1>
   
-  <P class="description">
+  <P class="wsDescription-ex">
     {{description}}
-    </P>
-    <div *ngIf="ex1"> 
-      <p class="itemsTitle">Use these tips to sound more natural and fluent:</p>
-      <ul class="list">
-        <li *ngFor="let item of itemlist" class="listItem">{{item}}</li>
-      </ul>
-    </div>
-<div class="audioListening" *ngIf="audListening">
-      <button ion-button outline  round (click)="playAudio()">
+  </P>
+
+  <div *ngIf="ex1"> 
+    <p class="itemsTitle">Use these tips to sound more natural and fluent:</p>
+    <ul class="list">
+      <li *ngFor="let item of itemlist" class="listItem">{{item}}</li>
+    </ul>
+  </div>
+
+  <div class="audioListening" *ngIf="audListening">
+    <button ion-button outline  round (click)="playAudio()">
       <ion-icon ios="ios-play"  *ngIf ="playBtn" md="ios-play"></ion-icon> 
       <ion-icon ios="ios-pause" *ngIf ="pauseBtn" md="ios-pause"></ion-icon> 
       {{btnTxt}}
     </button>
-</div>
+  </div>
   
-
 </ion-content>
 
 <ion-footer>
-    <button class="ws-full" (click)="goToPactices(title,PageTitle,7)">Go to practice</button>
+    <button class="ws-full" (click)="goToPactices(title, pageTitle, practicesNumber)">Go to practice</button>
 </ion-footer>

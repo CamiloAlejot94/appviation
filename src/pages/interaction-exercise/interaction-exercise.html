@@ -3,7 +3,7 @@
   <ion-navbar class="toolbar-ws">
     <ion-title>Exercise {{title}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only class="toolbarUser">
+      <button [navPush]="userProfile" ion-button icon-only class="toolbarUser">
         <ion-icon class="user"></ion-icon>
       </button>
     </ion-buttons>
@@ -247,5 +247,5 @@
 </ion-content>
 
 <ion-footer>
-    <button class="ws-full" (click)="goToPactices(title,pageTitle,7)">Go to practice</button>
+    <button class="ws-full" (click)="goToPactices(title, pageTitle, practicesNumber)">Go to practice</button>
 </ion-footer>

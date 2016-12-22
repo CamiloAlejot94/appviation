@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
 import { ShowPracticesPage } from '../show-practices/show-practices';
-
+import { UserProfilePage } from '../user-profile/user-profile';
 
 declare var firebase : any
 
@@ -20,6 +20,9 @@ export class InteractionExercise implements OnInit {
     centeredSlides: true,
     spaceBetween : 200
   };
+  
+  // PANTALLAS PARA NAV PUSH
+  userProfile = UserProfilePage
 
   contentLoad = false
 
@@ -35,8 +38,10 @@ export class InteractionExercise implements OnInit {
   ex4 = false
   ex5 = false
 
+  practicesNumber : any // PRÁCTICA DE FIREBASE
+
   constructor(public navCtrl: NavController, public navParams : NavParams) {
-    this.item = navParams.get('exercise')
+    this.item = navParams.get('exerciseNumber')
     this.viewContent()
     if(this.item==1){
       this.ex1=true
@@ -72,6 +77,7 @@ export class InteractionExercise implements OnInit {
       let firebaseData = data.val()
       this.pageTitle = firebaseData[this.item-1]['title']
       this.description = firebaseData[this.item-1]['description']
+      this.practicesNumber = firebaseData [this.item -1]['practicesNumber']
     }).then(() => this.contentLoad=true)
   }
 

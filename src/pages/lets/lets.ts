@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
 import { IcaoStandars } from '../icao-standars/icao-standars';
+import { QuickTestPage } from '../quick-test/quick-test';
+import { FinalTestPage } from '../final-test/final-test';
+import { UserProfilePage } from '../user-profile/user-profile';
 
 
 declare var firebase : any;
@@ -13,6 +15,10 @@ declare var firebase : any;
 
 export class Lets implements OnInit {
 
+  // PANTALLAS PARA NAV PUSH
+  quickTest = QuickTestPage
+  finalTest = FinalTestPage
+  userProfile = UserProfilePage
 
   constructor(public navCtrl: NavController) {
   }

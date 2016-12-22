@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { UserProfilePage } from '../user-profile/user-profile';
 import { Exercises } from '../exercises/exercises';
 
 declare var firebase
@@ -19,6 +19,8 @@ export class IcaoStandars {
   loader = true; // spinner
   contentLoad = false // contenido para cargar
   dataFirebase : any;
+
+  userProfile = UserProfilePage
 
   constructor(public navCtrl: NavController, navParams: NavParams) {
     this.title = navParams.get('page')

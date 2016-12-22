@@ -5,7 +5,7 @@
     </button>
     <ion-title>Let's practice</ion-title>
     <ion-buttons end>
-      <button ion-button clear class="toolbarUser">
+      <button [navPush]="userProfile" ion-button clear class="toolbarUser">
         <ion-icon class="user"></ion-icon>
       </button>
     </ion-buttons>
@@ -52,7 +52,7 @@
 
 <ion-footer>
   <div class="btnGroup">
-    <button ion-button class="btnTest" full><span class="quick-img"></span>&nbsp;Quick test</button>
-    <button ion-button class="btnTest" full><span class="final-img"></span>&nbsp;Final test</button>
+    <button ion-button class="btnTest" [navPush]="quickTest" full><span class="quick-img"></span>&nbsp;Quick test</button>
+    <button ion-button class="btnTest" [navPush]="finalTest" full><span class="final-img"></span>&nbsp;Final test</button>
   </div>
 </ion-footer>
