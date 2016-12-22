@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
+import { ShowPracticesPage } from '../show-practices/show-practices';
+
 
 declare var firebase : any
 
@@ -21,10 +23,10 @@ export class InteractionExercise implements OnInit {
 
   contentLoad = false
 
-  title : any // Titulo del header
-  exerciseNum : any
+  title : any
   pageTitle : any // Titulo del ejercicio
   description : any // Descripción del ejercicio
+  item : any
 
   // CONTENIDOS POR PANTALLAS
   ex1 = false
@@ -34,13 +36,16 @@ export class InteractionExercise implements OnInit {
   ex5 = false
 
   constructor(public navCtrl: NavController, public navParams : NavParams) {
-    this.exerciseNum = this.navParams.get('exercise')
-    this.title = "Exercise " + this.exerciseNum
+    this.item = navParams.get('exercise')
     this.viewContent()
+    if(this.item==1){
+      this.ex1=true
+    }
+    this.title = this.item
   }
 
   viewContent(){
-    switch(this.exerciseNum){
+    switch(this.item){
       case '1' :
       this.ex1 = true
       break;
@@ -65,9 +70,16 @@ export class InteractionExercise implements OnInit {
   ngOnInit(){
     firebase.database().ref('interactionExercise').once('value', data => {
       let firebaseData = data.val()
-      this.pageTitle = firebaseData[this.exerciseNum-1]['title']
-      this.description = firebaseData[this.exerciseNum-1]['description']
+      this.pageTitle = firebaseData[this.item-1]['title']
+      this.description = firebaseData[this.item-1]['description']
     }).then(() => this.contentLoad=true)
+  }
+
+  goToPactices(ex, btn, prac){
+    this.navCtrl.push(ShowPracticesPage, {
+      numEx : ex,
+      buttonTxt : btn,
+      practices : prac})
   }
 
 }
