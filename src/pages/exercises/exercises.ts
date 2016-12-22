@@ -10,6 +10,8 @@ import { VocabularyExercise } from '../vocabulary-exercise/vocabulary-exercise'
 import { QuickTestPage } from '../quick-test/quick-test';
 import { FinalTestPage } from '../final-test/final-test';
 import { UserProfilePage } from '../user-profile/user-profile';
+import { ShowPracticesPage } from '../show-practices/show-practices'
+import { Providers } from '../../providers/providers'
 
 declare var firebase : any
 
@@ -29,9 +31,10 @@ export class Exercises implements OnInit {
   exercises : any
   exerciseNum = []
 
-  constructor(public navCtrl: NavController, navParams: NavParams) {
+  constructor(public navCtrl: NavController, navParams: NavParams, public provider : Providers) {
     //Recibe las variables que se envian de ICAO
     this.pageName = navParams.get('page');
+    this.provider.pageTitle = this.pageName
   }
 
   goToExercises(pageName, ex){

@@ -24,6 +24,7 @@ import { FluencyExercise } from '../pages/fluency-exercise/fluency-exercise'
 import { FluencyPractice } from '../pages/fluency-practice/fluency-practice'
 import { ShowPracticesPage } from '../pages/show-practices/show-practices'
 import { InteractionExercise } from '../pages/interaction-exercise/interaction-exercise'
+import { InteractionPractice } from '../pages/interaction-practice/interaction-practice'
 import { StructureExercise } from '../pages/structure-exercise/structure-exercise'
 import { StructurePractice } from '../pages/structure-practice/structure-practice'
 import { VocabularyExercise } from '../pages/vocabulary-exercise/vocabulary-exercise'
@@ -31,6 +32,7 @@ import { VocabularyPractice } from '../pages/vocabulary-practice/vocabulary-prac
 import { QuickTestPage } from '../pages/quick-test/quick-test'
 import { FinalTestPage } from '../pages/final-test/final-test'
 import { UserProfilePage } from '../pages/user-profile/user-profile'
+import { Providers } from '../providers/providers'
 // import { ModalWdW } from '../pages/fluency-practice/fluency-practice'
 
 
@@ -110,6 +112,6 @@ import { UserProfilePage } from '../pages/user-profile/user-profile'
     UserProfilePage    
     // ModalWdW
   ],
-  providers: []
+  providers: [ Providers ]
 })
 export class AppModule {}
