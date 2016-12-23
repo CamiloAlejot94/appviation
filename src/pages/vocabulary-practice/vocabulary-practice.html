@@ -29,16 +29,39 @@
   </div>
 
   <!--
+    EJERCICIO 1 PRACTICA 1
+  -->
+  <div *ngIf="ex1">
+    <div class="bgPlane">
+      <img src="assets/img/icon_plane.svg" alt="">
+    </div>
+
+    <div class="answersEx1">
+      <ul>
+        <li *ngFor="let part of  partsPlane; let i = index" class="answersEx1Item">{{i+1 + "."}} {{part}}</li>
+      </ul>
+    </div>
+
+  </div>
+  <!--
+    TERMINA EJERCICIO 1 PRACTICA 1
+  -->
+
+  <!--
+    EJERCICIO 4 PRACTICA 1
+  -->
+  <div *ngIf="ex4">
+  <!--
     SLIDES PARA ACOMODAR FICHAS
   -->
   <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions">
 
     <ion-slide class="practice-slide">
-      <div class="practice-exercise-figure">
+      <button class="practice-exercise-figure">
         <div class="wordsGrid">
-          <div class="word">Palabra 1</div>
+          <div class="word" *ngFor="let word of myAnswer; let i = index" id="{{i}}-answer" (click)="popAnswer(word.word, word.index, i)">{{word.word}}</div>
         </div>
-      </div>
+      </button>
     </ion-slide>
 
   </ion-slides>
@@ -49,12 +72,16 @@
   -->
   <div class="words">
 
-    <button class="word" *ngFor="let word of myWords">
-      <p>{{word}}</p>
+    <button class="word" *ngFor="let word of myWords; let i = index">
+      <span class="wordInner" id="{{i}}-question" [class.wordInnerAnimation]="index" (click)="pushAnswer(i, word)">{{word}}</span>
+        <!--<span [ngClass]="['wordInner']" (click)="pushAnswer(word, i)">{{word}}</span>-->
     </button>
 
   </div>
-
+  </div>
+  <!--
+    TERMINA EJERCICIO 4 PRACTICA 1
+  -->
 
 </ion-content>
 

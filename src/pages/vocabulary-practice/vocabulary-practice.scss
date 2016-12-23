@@ -1,4 +1,4 @@
-page-vocabulary-practice {
+ page-vocabulary-practice {
 
 ion-title{
     line-height: 17px;
@@ -38,7 +38,7 @@ ion-title{
 	//Animación para ocultar el texto descriptivo
 	&-animation{
 		margin-top:-280px;
-		margin-bottom : 120px;
+		margin-bottom : 280px;
 	}
 }
 
@@ -63,6 +63,14 @@ ion-title{
     }
 }
 
+.opacityWords{
+    opacity: 0 !important;
+}
+
+.displayWords{
+    display: none !important;
+}
+
 .content-figures{
     height: 213px;
 
@@ -82,12 +90,39 @@ ion-title{
 }
 
 /*==============================================================================================================================
+=========================================== EXERCISE 1 - PRACTICE 1 ===================================================
+==============================================================================================================================*/
+.bgPlane{
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+    img{
+        width: 90%;
+    }
+}
+.answersEx1Item{
+    list-style: none;
+    color:white;
+    margin : 15px 0;
+    font-size: 16px;
+}
+
+/*==============================================================================================================================
+=========================================== FINALIZA EXERCISE 1 - PRACTICE 1 ===================================================
+==============================================================================================================================*/
+
+
+/*==============================================================================================================================
 ================================================ EXERCISE 4 - PRACTICE 1 ========================================================
 ==============================================================================================================================*/
 .wordsGrid{
-    width: 100%;
-    height: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:10px;
 
     .word{
         display: inline-block;
@@ -97,14 +132,11 @@ ion-title{
         color: white;
         font-size: 14px;
         height: 29px;
+        border-radius: 6px;
     }
 
 }
 
-.wordBlue{
-    background-color: $color_base;
-    color: white;
-}
 
 // PALABRAS PARA SELECCIONAR
 .words{
@@ -112,25 +144,23 @@ ion-title{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 90%;
 
 
     .word{
-        background-color: rgba(0,0,0,0.15);
-        max-width: 150px;
+        background-color: rgba(0, 0, 0, 0.15);
         border-radius: 6px;
-        margin: 5px;
+        margin: 10px;
+        padding: 5px 0;
 
-        p{
+        &Inner{
             background-color: white;
             color: #29B6F6;
-            padding: 7px;
-            text-align: center;
+            padding: 5px 10px;
             border-radius: 6px;
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 0.7px;
-            position: relative;
+            transition: 200ms;
         }
     }
 
