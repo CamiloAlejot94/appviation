@@ -12,15 +12,15 @@ declare var firebase
 export class VocabularyExercise {
 
   title : any
-  item:number
+  exerciseNumber:number
   pageTitle: any
   description: any
 
   practicesNumber : any // Cantidad de practicas por cada ejercicio
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.item = navParams.get('exerciseNumber')
-    this.title = this.item
+    this.exerciseNumber = navParams.get('exerciseNumber')
+    this.title = this.exerciseNumber
   }
 
   goToPactices(ex, btn, prac){
@@ -33,11 +33,10 @@ export class VocabularyExercise {
   ngOnInit(){
     firebase.database().ref("vocabularyExercise").once("value", data=>{
       let firebaseData = data.val()
-      console.log(firebaseData)
       
-      this.pageTitle = firebaseData[this.item-1]['title']
-      this.description = firebaseData [this.item -1]['description']
-      this.practicesNumber = firebaseData [this.item -1]['practicesNumber']
+      this.pageTitle = firebaseData[this.exerciseNumber-1]['title']
+      this.description = firebaseData [this.exerciseNumber -1]['description']
+      this.practicesNumber = firebaseData [this.exerciseNumber -1]['practicesNumber']
     })
   }
 
