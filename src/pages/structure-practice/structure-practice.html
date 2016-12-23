@@ -1,12 +1,117 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>structurePractice</ion-title>
+  <ion-navbar class="toolbar-ws">
+    <ion-title>Exercise {{item}} <br><span class="Subtitle"> Practice {{numEx}}</span></ion-title>    
+    <ion-buttons end>
+      <button ion-button icon-only class="toolbarUser">
+        <ion-icon class="user"></ion-icon>
+      </button>
+    </ion-buttons>
+    
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="ws-bg" >
+  
+<div>
+    <!--Botón para abrir la información-->    
+    <div (click)="txtPractice=!txtPractice" class="viewTxtPractice">Information</div>
+    <!--Parrafo descriptivo de la práctica (Superior)-->
+    <div class="txt-practice txtPractice" [class.txt-practice-animation]="txtPractice">
+    <!--Botón flotante para cerrar la descripción de la práctica-->
+    <div class="close-practice" (click)="txtPractice=!txtPractice">
+      <ion-icon ios="md-close" md="md-close"></ion-icon>
+    </div>
+    {{description}}
+    </div>
+  </div>
+  
+  
+<p class="text" padding *ngIf=text>
+
+
+      After resting the whole day in a desert type scrub with a clear cloudless sky, a photographer 
+      <span class="textG" (click) = "showAlert(0)">{{answers[0]}} </span>
+      next to a tripod operating a camera amongst some scrub, which has been dried by the sun. He
+      <span class="textG" (click) = "showAlert(1)">{{answers[1]}}</span>
+      a photograph or
+      <span class="textG" (click) = "showAlert(2)">{{answers[2]}} </span> 
+      jet aircraft which looks like a 777, with no specific marking on the fuselage, 
+      <span class="textG" (click) = "showAlert(3)">{{answers[3]}}</span>
+      from a runway. He
+      <span class="textG" (click) = "showAlert(4)">{{answers[4]}}</span>
+      in shirt sleeves and with what looks like a small rucksack on his back. It is easy 
+      <span class="textG" (click) = "showAlert(5)">{{answers[5]}}</span>
+      that there is shimmering heat the whole way around the aircraft that he could see from the two engines as the wonderful background that 
+      <span class="textG" (click) = "showAlert(6)">{{answers[6]}}</span>
+      with the shimmer of the heat. The aircraft nose 
+      <span class="textG" (click) = "showAlert(7)">{{answers[7]}}</span>
+      , furthermore the nose wheel is perhaps twenty feet in the air and the main wheels 
+      <span class="textG" (click) = "showAlert(8)">{{answers[8]}}</span>
+      just about to 
+      <span class="textG" (click) = "showAlert(9)">{{answers[9]</span>
+      . In addition, the angle is quite steep and the tail is near the runway, but 
+      <span class="textG" (click) = "showAlert(10)">{{answers[10]}}</span>
+      no sign of debris, which he could 
+      <span class="textG"(click) = "showAlert(11)">{{answers[11]}}</span> 
+      if there
+      <span class="textG"(click) = "showAlert(12)">{{answers[12]}}</span>
+      contact between the tail and the ground in a tail strike. However, the engines are so close to him that he
+      <span class="textG"(click) = "showAlert(13)">{{answers[13]}}</span>
+      be blasted by them. He
+      <span class="textG"(click) = "showAlert(14)">{{answers[14]}}</span>
+      what could have happened as he
+      <span class="textG" (click) = "showAlert(15)">{{answers[15]}}</span>
+      any harm on his own.
+
+  </p>
+
+  <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions" >      
+          <ion-slide class="practice-slide" *ngFor="let slides of array;let i=index">
+            {{slides}}              
+            <div class="practice-exercise-figure">
+              <img clas="backImage" src="assets/img/Avion{{i+1}}.jpeg">              
+            </div>
+          </ion-slide>
+    </ion-slides>
+
+
+
+
+
+
+
+
+
 
 </ion-content>
+
+
+<ion-footer class="footer">
+  <ion-icon class="menu_rec_help"  ios="md-help-circle" md="md-help-circle" (click)="helpMenu()"></ion-icon>
+  <button class="btn_transparent" *ngIf="btnDone">Done</button>
+
+  <button class="btn_mic" *ngIf ="btnMic" (click)=shwStop()>
+      <ion-icon ios="ios-mic" md="ios-mic"></ion-icon>
+  </button>
+  <button class="btn_play" *ngIf="btnPlay"(click)=shwPause()>
+      <ion-icon ios="ios-play" md="ios-play"></ion-icon>
+  </button>
+  <button class="btn_pause"*ngIf="btnPause"(click)=shwPlay()>
+      <ion-icon ios="ios-pause" md="ios-pause"></ion-icon>
+  </button>
+  <button class="btn_stop" *ngIf="btnStop"(click)=shwMic()>
+      <ion-icon ios="md-square" md="md-square"></ion-icon>
+  </button>
+  <p class="menu_rec_time2" *ngIf="minSec">
+      <!--{{min}}:{{sec}}-->
+      <span *ngIf="min<10">0{{min}}</span>
+      <span *ngIf="min>9">{{min}}</span>
+      <span>:</span>      
+      <span *ngIf="sec<10">0{{sec}}</span>
+      <span *ngIf="sec>9">{{sec}}</span>
+    </p>
+
+</ion-footer>

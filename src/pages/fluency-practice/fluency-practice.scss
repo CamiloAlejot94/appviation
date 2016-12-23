@@ -39,19 +39,7 @@ page-fluency-practice {
     }
 
 }
-.Btns {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    width: 150px;
-    height: 45px;
-    align-self: center;
-    left: 50%;
-    border-radius: 6px;
-    position: absolute;
-    margin-left: -75px;
-    font-size: 18px;
-    margin-top: 20px;
-}
+
 .rec-btn{
     display: inline-block;
     vertical-align: middle;
@@ -340,7 +328,7 @@ page-fluency-practice {
 }
 
 ion-footer{
-    // height: 80px;
+    height: 80px;
     background-color: rgba(255, 255, 255, 0.05);
 
     &::before{

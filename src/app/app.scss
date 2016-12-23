@@ -76,6 +76,10 @@ $h1_size : 1.8em;
 .toolbar-ws > .toolbar-background{
 	background :  linear-gradient(to right, $color_bar2, $color_bar1) !important;
 }
+.toolbarTransparent-ws > .toolbar-background{
+	background :  transparent;
+    
+}
 //Atributos generales del ion-navbar barra superior
 .toolbar-ios, .header-ios, ion-header, ion-navbar{
     min-height: 60px !important;
@@ -276,11 +280,16 @@ ion-navbar{
 
 // Segundo estilo de boton (Fondo transparente, letra negra, bordes redondos) ------------------------------------------
 .btn_transparent{
-    background-color : rgba(255,255,255,0.2);
-    min-width: 130px;
-    border-radius: 6px;
-    min-height: 50px;
-    font-size: $p_size;
+  background-color: rgba(255, 255, 255, 0.2);
+    width: 130px;
+    border-radius: 50px;
+    min-height: 40px;
+    font-size: 1.17em;
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    margin-top: 20px;
 }
 
 // Segundo estilo de boton (Fondo transparente, letra negra, bordes redondos) ------------------------------------------
@@ -301,7 +310,31 @@ ion-navbar{
     background: linear-gradient(to right, $color_base , $color_base2);
     border-radius : 10px;
 }
+.btn_mic{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    font-size: 20px;   
+}
 
+.btn_pause{
+    background-color:  #00e676;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    font-size: 20px;   
+}
+.btn_stop{
+    background-color: #F44336;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    font-size: 20px;   
+}
 //---------------------------------------------------------------------
 //------------------------------ INPUTS -------------------------------
 //---------------------------------------------------------------------
@@ -473,3 +506,4 @@ ICONO JUNTO AL INPUT
     }
 
 } //Termina MediaQuery para pantalla alta
+
