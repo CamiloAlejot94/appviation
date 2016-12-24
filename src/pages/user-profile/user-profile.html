@@ -3,41 +3,36 @@
 
   <ion-navbar  class=.toolbarTransparent-ws >
     <ion-title>User profile <br></ion-title>    
-    <ion-buttons end>
-      <button style="background: transparent">
-          <p class="editProf">Edit </p>
-      </button>
-    </ion-buttons>    
-  </ion-navbar>  
+    </ion-navbar>  
 </ion-header>
 
 
 <ion-content class="ws-bg" >
-  <p class="namProf">Adam Sandler</p>
+  <p class="namProf">{{profName}}</p>
   <img src="assets/img/iconMail(2).svg" class="profIconMail">
-  <p class="txtMail">Adam.Sandler@papcorn.com</p>
-  <button class="editMail">
+  <p class="txtMail">{{profMail}} </p>
+  <button class="editMail" (click)=changeMail()>
       <ion-icon ios="md-create" md="md-create"></ion-icon>
   </button>
 
 
   <img src="assets/img/iconProfile.svg" class="profIconUser">
-  <p class="txtUser">AdamSandler</p>
-  <button class="editUser">
+  <p class="txtUser" >{{profUser}} </p>
+  <button class="editUser" (click)=changeUser()>
     <ion-icon ios="md-create" md="md-create"></ion-icon>
   </button>
 
 
   <img src="assets/img/iconpassword.svg" class="profIconLock">    
-  <p class="txtPass">*****</p>
-  <button class="editPass">
+  <p class="txtPass">{{showPass}} </p>
+  <button class="editPass" TYPE="password" (click)="changePass()" >
       <ion-icon ios="md-create" md="md-create"></ion-icon>
   </button>
 
 
   <img src="assets/img/iconshield.svg" class="profIconShield"  >
-  <p class="shield">Actor</p>
-  <button class="editShield">
+  <p class="shield">{{profShield}}</p>
+  <button class="editShield"(click)=changeShield()>
     <ion-icon ios="md-create" md="md-create"></ion-icon>
   </button>
 
