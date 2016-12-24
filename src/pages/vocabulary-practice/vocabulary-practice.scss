@@ -70,11 +70,15 @@ ion-title{
 .displayWords{
     display: none !important;
 }
+.selectWord{
+    background-color: #00E676 !important;
+    color: white !important;
+}
 
-.content-figures{
+.content-figures, .content-figures2{
     height: 213px;
 
-    .practice-exercise-figure{
+    .practice-exercise-figure, .practice-exercise-figure2{
         width: 290px;
         background: white;
         color: $color_base;
@@ -86,6 +90,17 @@ ion-title{
             font-weight: $bold;
             font-size: 18px;
         }
+    }
+}
+// Estilos para la practica 1 del ejercicio 2
+.content-figures2{
+    margin-top: 10%;
+    height: 170px;
+    .practice-exercise-figure{
+        color:#222;
+        font-size: 16px;
+        line-height: 22px;
+        height: 120px;
     }
 }
 

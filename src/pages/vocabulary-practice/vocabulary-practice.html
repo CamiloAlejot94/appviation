@@ -46,6 +46,36 @@
   <!--
     TERMINA EJERCICIO 1 PRACTICA 1
   -->
+  
+
+  <!--
+    EJERCICIO 2 PRACTICA 1
+  -->
+  <div *ngIf="ex2">
+    <ion-slides class="content-figures2" #sliderComprehension [options]="mySlideOptions">
+
+    <ion-slide class="practice-slide">
+      <button class="practice-exercise-figure">
+        It is an additional paved area beyond the normal end of therunway for aircraft overrunning in an emergency
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="words">
+
+    <button class="word" *ngFor="let word of myWords; let i = index">
+      <span class="wordInner" id="{{i}}-answer" [class.wordInnerAnimation]="index" (click)="selectAnswer(i, word)">{{word}}</span>
+        <!--<span [ngClass]="['wordInner']" (click)="pushAnswer(word, i)">{{word}}</span>-->
+    </button>
+
+  </div>
+
+  </div>
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////
+    TERMINA EJERCICIO 2 PRACTICA 1
+  //////////////////////////////////////////////////////////////////////////////////////////////////-->
+
 
   <!--
     EJERCICIO 4 PRACTICA 1
