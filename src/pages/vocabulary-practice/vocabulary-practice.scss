@@ -38,7 +38,8 @@ ion-title{
 	//Animación para ocultar el texto descriptivo
 	&-animation{
 		margin-top:-280px;
-		margin-bottom : 280px;
+        height: 140px;
+		margin-bottom : 200px;
 	}
 }
 
@@ -94,7 +95,6 @@ ion-title{
 }
 // Estilos para la practica 1 del ejercicio 2
 .content-figures2{
-    margin-top: 10%;
     height: 170px;
     .practice-exercise-figure{
         color:#222;
@@ -108,11 +108,14 @@ ion-title{
 =========================================== EXERCISE 1 - PRACTICE 1 ===================================================
 ==============================================================================================================================*/
 .bgPlane{
-    width: 100%;
+    width: 90%;
+    margin:auto;
+    margin-top:10%;
     height: 250px;
     background-color: white;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
     
     img{
         width: 90%;
@@ -123,6 +126,10 @@ ion-title{
     color:white;
     margin : 15px 0;
     font-size: 16px;
+
+    .color{
+        color:#00E676;
+    }
 }
 
 /*==============================================================================================================================
@@ -142,7 +149,7 @@ ion-title{
     .word{
         display: inline-block;
         margin: 5px;
-        padding: 5px;
+        padding: 8px;
         background-color: #29B6F6;
         color: white;
         font-size: 14px;
@@ -150,6 +157,11 @@ ion-title{
         border-radius: 6px;
     }
 
+}
+
+// Primera letra en mayus
+.capitalize{
+    text-transform: capitalize;
 }
 
 
