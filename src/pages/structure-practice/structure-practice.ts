@@ -81,7 +81,7 @@ words2=[[],[]]
   showAlert(ans){
  
     let alert= this.ctrl.create ();
-    alert.setTitle( "Select the correct word for the question ")
+    alert.setTitle( "Select the correct word for the question")
     for(let i=0; i<this.words.length;i++ ){
       if(i==0){
         alert.addInput({

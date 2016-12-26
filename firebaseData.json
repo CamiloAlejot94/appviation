@@ -1172,6 +1172,30 @@
         "id" : 1,
         "description" : "Place the parts of the plane in the right place, then describe possible structural problems you may have with them."
       }
+    },
+    "1" : {
+      "0" : {
+        "id" : 1,
+        "description" : "Connect each definition with the word that corresponds. These words are from the parts of the airport, either building, areas or infrastructure."
+      }
+    },
+    "2" : {
+      "0" : {
+        "id" : 1,
+        "description" : "Now, taking into account the vocabulary related to the ground, let’s practice a little more. Here you have four different non routine situations that you may encounter, analyze them and create a report based on what you are supposed to do in each case. (Two minutes for each situation) then send it to be checked."
+      }
+    },
+    "3" : {
+      "0" : {
+        "id" : 1,
+        "description" : "The more factors that may cause an accident you have in mind, the more extended vocabulary you will use when speaking. Here you have to scramble the sentences and identify some of those."
+      }
+    },
+    "4" : {
+      "0" : {
+        "id" : 1,
+        "description" : "Based on the list on the right, choose the correct word to complete the sentences on the left."
+      }
     }
   },
 
