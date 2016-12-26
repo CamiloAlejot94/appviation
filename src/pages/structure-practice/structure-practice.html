@@ -68,7 +68,7 @@
 
   </p>
 
-  <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions" >      
+  <ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions" *ngIf=sld1 >      
           <ion-slide class="practice-slide" *ngFor="let slides of array;let i=index">
             {{slides}}              
             <div class="practice-exercise-figure">
@@ -77,12 +77,35 @@
           </ion-slide>
     </ion-slides>
 
+<!--
+    SLIDES PARA ACOMODAR FICHAS
+  -->
+<ion-slides class="content-figures" #sliderComprehension [options]="mySlideOptions">
+
+    <ion-slide class="practice-slide">
+      <button class="practice-exercise-figure">
+        <div class="wordsGrid">
+          <div class="word" *ngFor="let word of myAnswer; let i = index" id="{{i}}-answer" (click)="popAnswer(word.word, word.index, i)">
+            <span *ngIf="i == 0" class="capitalize">{{word.word}}</span>
+            <span *ngIf="i != 0">{{word.word}}</span>
+          </div>
+        </div>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
 
 
+  <!--
+    PALABRAS EN FORMA DE FICHAS PARA SELECCIONAR
+  -->
+  <div class="words">
 
+    <button class="word" *ngFor="let word of myWords; let i = index">
+      <span class="wordInner" id="{{i}}-question" [class.wordInnerAnimation]="index" (click)="pushAnswer(i, word)">{{word}}</span>
+    </button>
 
-
-
+  </div>
 
 
 

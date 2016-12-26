@@ -11,6 +11,8 @@ array= ["","",""]
 item : any
 prac : any
 numEx : any
+myWords : any
+myAnswer : any
 btnMic = false
 btnPlay= false
 btnStop=false
@@ -18,9 +20,11 @@ btnPause=false
 btnDone=false
 minSec=false
 text=false
+sld1=false
 answers=['___(stand)', '___ (take)',' __ (film)','___(take off)','__ (be)',' ___ (see)','___ (combine)','___ (lift)','___ (be)','__ (pull up)','___ (there be)','___ (expect)',' __ (be)','____ (can)','___ __ (probably know)','__ ____ (be prevent)']
 words=['was standing', 'is taking', 'filming', 'taking off', 'is, to see', 'is combined', 'lifted', 'pull up', 'are', 'pull up', 'there is', 'expect', 'were', 'could', 'will', 'know', 'will be preventing']
-
+answers2=[['','',''],['','','']]
+words2=[[],[]]
 @ViewChild('sliderComprehension') slider: Slides;
 
   mySlideOptions = {
@@ -32,9 +36,7 @@ words=['was standing', 'is taking', 'filming', 'taking off', 'is, to see', 'is c
     this.item=this.navParams.get("item")
     this.prac=this.navParams.get("prac")
     this.numEx=this.navParams.get("numEx")
-  console.log ("item : " + this.item)
-  console.log ("prac : " + this.prac)
-  console.log ("numEx : " + this.numEx)
+  
 
      if (this.item==1 && this.numEx==1||this.item==2 && this.numEx==1||this.item==2 && this.numEx==2||this.item==5 && this.numEx==1||this.item==5 && this.numEx==2){
       this.btnDone=true
@@ -44,7 +46,9 @@ words=['was standing', 'is taking', 'filming', 'taking off', 'is, to see', 'is c
         this.minSec=true}
       if (this.item==1 && this.numEx==1){
         this.text=true
-
+      }
+      if (this.item==4 && this.numEx==1){
+        this.sld1=true
       }
   }
      
@@ -105,5 +109,22 @@ words=['was standing', 'is taking', 'filming', 'taking off', 'is, to see', 'is c
       }
     });
     alert.present();
+  }
+
+  pushAnswer(index, word){
+    if(document.getElementById(index+"-question").classList.toggle('opacityWords')){
+      // Envía la respuesta al vector de respuestas
+      this.words2[1].push({"index" : index, "word" : word})
+    } else {
+      // Lo mantiene desactivado en caso de que el usuario ya lo haya enviado como respuesta
+      document.getElementById(index+"-question").classList.toggle('opacityWords')
+    }
+  }
+
+  popAnswer(word, index, i){
+    this.words2[1].splice(i,1)
+    this.words2[1]
+    document.getElementById(index+"-question").classList.toggle('opacityWords')
+    this.answers2[1][index] = word
   }
 }

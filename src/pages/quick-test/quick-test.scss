@@ -1,3 +1,245 @@
+quick test scss
+
 page-quick-test {
+    .audioListening{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_base;
+        z-index: -1;
+
+        button {
+            border: 1px solid white;
+            color: white;
+            font-size: 18px;
+            height: 38px;
+            width: 140px;
+            margin: 0;
+            padding: 0;
+            font-weight: $bold;
+
+            ion-icon{
+                margin-right: 10px;
+            }
+        }
+    }
+.list_audio, .list_audio_listening{
+    border-top:1px solid white;
+    width: 100%;
+    margin:auto;
+
+    // Atributos para cuando el audio se está reproduciendo
+    .playing{
+        border-left: 6px solid $color_base !important;
+        .audio_gif{
+            display: block !important;
+        }
+    }
+
+    .audio{
+        width: 100%;
+        padding: 0 5%;
+        border-bottom : 1px solid white;
+        border-left: 6px solid transparent;        
+        height: 60px;
+        transition: 300ms;
+
+        &:last-child{
+            border-bottom: 0;
+        }
+
+        &:active{
+            background: rgba(255,255,255,0.2);
+        }
+
+        &_btn{
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 100%;
+            background-color: transparent;
+            border: 2px solid white;
+            width: 35px;
+            height: 35px;
+            font-size: 23px;
+            letter-spacing: -4px;
+            color:white;
+
+            //Icono de pause
+            .iconPause{
+                margin-left: -5px;
+            }
+        }
+
+        &_name{
+            display: inline-block;
+            vertical-align: middle;
+            color:white;
+            margin:0;
+            margin-top:5px;
+            margin-left: 10px;
+            font-size: 23px;
+            border-radius: 100%;
+        }
+
+        &_description{
+            margin: 0;
+            margin-left: 10px;
+            color:#EED;
+        }
+
+        &_gif{
+            display: none;
+            height: 20px;
+            width: 40px;
+            margin-top: -35px;
+            float: right;
+        }
+
+        .playBtn{
+            background-color: transparent;
+            height: 30px;
+            width: 30px;
+            position:absolute;
+            right: 0;
+            border-radius: 100%;
+            border: 1px solid white;
+            color:white;
+            margin-top: -35px;
+            margin-right: 5%;
+        }
+
+        // BOTÓN DERECHO DENTRO DEL LISTADO DE TEXTOS
+        &_answer, &_answer_a, &_answer_n, &_answer_ns{
+            background-color:transparent;
+            float: right;
+            background-image: url(../assets/img/empty.svg);
+            margin-top: -40px;
+            width: 35px;
+            height: 35px;
+        }
+
+        &_answer_a{
+            background-image: url(../assets/img/affirm.svg);
+        }
+
+        &_answer_n{
+            background-image: url(../assets/img/negative.svg);
+        }
+
+        &_answer_ns{
+            background-image: url(../assets/img/notStated.svg);
+        }
+
+    }
+
+    // NUBE BLANCA FLOTANTE PARA SELECCIONAR RESPUESTAS
+    .float-div{
+        position: absolute;
+        right: 0;
+        border-radius: 20px;
+        background-color: white;
+        width: 0;
+        height: 0;
+        background: transparent;
+        opacity: 0;
+        margin-top:-39px;
+        margin-right: 20px;
+        transition: 200ms;
+
+        &-close{
+            position: absolute;
+            right: 0;
+            margin-right: 5px;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: #DDD;
+            text-align: center;
+            z-index: 100;
+            display: none;
+            transition: 800ms;
+
+            ion-icon{
+                color: white;
+                font-size: 16px;
+                vertical-align: -webkit-baseline-middle;
+                
+            }
+        }
+
+        .answer{
+            height: 40px;
+            margin: 4.9px 0;
+            display: flex;
+            align-items: center;
+            transition: 800ms;
+            display: none;
+
+            &:active{
+                background-color: rgba(0,0,0,0.02)
+            }
+
+            &-affirm, &-negative, &-notStated{
+                margin-left: 10px;
+                width: 30px;
+                height: 30px;
+            }
+
+            &-affirm{
+                background-image: url(../assets/img/affirm.svg);
+            }
+
+            &-negative{
+                background-image: url(../assets/img/negative.svg);
+            }
+
+            &-notStated{
+                background-image: url(../assets/img/notStated.svg);
+            }
+
+            &-text{   
+                color: $color_bar1;
+                margin-left: 10px; 
+                font-size: 18px;      
+            }
+        }
+    }
+
+    // ANIMACIÓN DE NUBE BLANCA FLOTANTE PARA SELECCIONAR RESPUESTAS    
+    .float-div-animation{
+        position: absolute;
+        right: 0;
+        border-radius: 20px;
+        background-color: white;
+        width: 220px;
+        height: 141px;
+        margin: 0;
+        padding: 0;
+        margin-top: -39px;
+        margin-right: 5%;
+        transition:200ms;
+        opacity: 1;
+
+        .float-div-close{
+            display: block;
+            transition: 10ms;
+            
+        }
+
+        .answer{
+            display: block;
+            height: 40px;
+            margin: 4.9px 0;
+            display: flex;
+            align-items: center;
+            transition: 800ms;
+        }
+
+    }
+
+}
 
 }
